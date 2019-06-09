@@ -2,10 +2,22 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: auto;
   padding: 0 20px;
   text-align: right;
-  background-color: #ccc;
+
+  @include max(1200) {
+    position: relative;
+    margin: 15px 0 15px auto;
+  }
+  @include max(760) {
+    margin: 15px 0;
+  }
+  @include max(500) {
+    margin: 0 0 10px 0;
+  }
+  @include max(425) {
+    margin: 0;
+  }
 }
 
 .header__phone {

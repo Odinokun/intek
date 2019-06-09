@@ -3,13 +3,8 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  .breadcrumbs__item:last-child {
-    .breadcrumbs__link {
-      text-decoration: none;
-      pointer-events: none;
-    }
-  }
 }
+
 .breadcrumbs__item {
   position: relative;
   list-style: none;
@@ -17,18 +12,22 @@
     font-size: 12px;
     margin: 0 3px 0 4px;
     content: '/';
+    color: #969696;
   }
   &:last-child {
+    .breadcrumbs__link {
+      pointer-events: none;
+      color: $dark;
+    }
     &::after {
       display: none;
     }
   }
 }
+
 .breadcrumbs__link {
-  font-size: 12px;
+  font-size: 11px;
   white-space: nowrap;
-  color: #403549;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  color: #969696;
 }

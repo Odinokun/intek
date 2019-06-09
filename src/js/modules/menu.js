@@ -1,16 +1,14 @@
-module.exports = function() {
+module.exports = function () {
 
   // begin menu
-
-  $('#burger').click(function(){
-    $(this).toggleClass('open');
-    $('#header-menu').toggleClass('open');
+  $('#burger').on('click', function () {
+    $(this).toggleClass('active');
+    $('#header__menu').toggleClass('active');
   });
 
-  $('.header-menu__link').click(function(){
-    $('#burger, #header-menu').removeClass('open');
+  $('.header__menu-link').on('click', function () {
+    $('#burger, #header__menu').removeClass('active');
   });
-
   // end menu
 
 };

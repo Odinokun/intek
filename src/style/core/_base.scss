@@ -3,23 +3,27 @@
 *::after {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: $font-light;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.38;
   color: $text;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
 }
+
 h1,
 h2,
 h3,
@@ -30,29 +34,35 @@ p {
   font-weight: 400;
   margin: 0 0 10px 0;
 }
+
 h1 {
   font-size: 36px;
 }
+
 h2 {
   font-size: 32px;
 }
+
 h3 {
   font-size: 28px;
 }
+
 h4 {
   font-size: 24px;
 }
+
 h5 {
   font-size: 22px;
 }
+
 h6 {
   font-size: 20px;
 }
+
 p {
   font-size: 16px;
-  strong {
-  }
 }
+
 a {
   transition: color .5s;
   color: $highlight;
@@ -61,18 +71,21 @@ a {
     color: $highlight-hov;
   }
 }
+
 ol,
 ul {
   li {
     padding: 3px 0;
   }
 }
+
 ul {
   li {
     // путь к кастомной картинке пункта ul
     // list-style-image: url('../img/ul.png');
   }
 }
+
 //кастомные пункты списка с цифрами
 ol {
   // list-style: none;
@@ -81,6 +94,7 @@ ol {
     // color: $brand;
   }
 }
+
 input,
 textarea,
 select,
@@ -88,6 +102,7 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
+
 input {
   padding: 3px 10px 5px 10px;
   color: $text;
@@ -96,40 +111,44 @@ input {
     @include placeholder-color($text);
   }
 }
+
 textarea {
   resize: none;
 }
+
 input.error,
 textarea.error {
   border-color: #ed1b24 !important;
   background: #fbd1d3 !important;
 }
+
 svg {
   display: block;
   overflow: visible;
 }
+
 //изменяем цвет выделения текста мышью
 ::selection {
-   background-color: $brand;
-   color: $text;
-   text-shadow: none;
+  color: $text;
+  background-color: $brand;
+  text-shadow: none;
 }
 
-
 .main-wrap {
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
-  position: relative;
   &.no-scroll {
     overflow: hidden;
   }
 }
+
 .main {
   flex-grow: 1;
+  padding-top: 260px;
 }
-
 
 .container {
   position: relative;
