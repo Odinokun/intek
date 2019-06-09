@@ -1,20 +1,21 @@
 // ***** main colors *******
-$brand: #00407a;
-$dark: #181a19;
+$brand: #faa61a;
+$dark: #1e1e1e;
+
 $light: #f5f5f5;
 
-$highlight: #f6882b;
-$highlight-hov: #f2a621;
+$highlight: #faa61a;
+$highlight-hov: #faa61a;
 
 // ***** text colors *******
-$text: #646464;
-$title: #141414;
+$text: #1e1e1e;
+$title: #1e1e1e;
 
 // ===== fonts =====
-$font:            'OpenSans', sans-serif;
-$font-bold:       'OpenSans-Bold', sans-serif;
 $font-light:      'OpenSans-Light', sans-serif;
 $font-semibold:   'OpenSans-Semibold', sans-serif;
+$font-bold:       'OpenSans-Bold', sans-serif;
 
-// ===== sizes =====
-$radius-btn: 6px;
+$font-medium:     'Mplus-Medium', sans-serif;
+$font-extrabold:  'Mplus-ExtraBold', sans-serif;
+$font-black:      'Mplus-Black', sans-serif;

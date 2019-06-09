@@ -15,8 +15,8 @@ $(function() {
   // begin Popup
   // require('./modules/popup')();
 
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
+  // begin menu
+  require('./modules/menu')();
 
   // begin Animate.css
   // require('./modules/waypoints')();

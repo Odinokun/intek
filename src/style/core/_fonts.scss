@@ -5,12 +5,6 @@
 }
 
 @font-face {
-  font-family: OpenSans-Light;
-  src:  url('../fonts/OpenSans-Light.woff2') format('woff2'),
-        url('../fonts/OpenSans-Light.woff')  format('woff');
-}
-
-@font-face {
   font-family: OpenSans-Bold;
   src:  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
         url('../fonts/OpenSans-Bold.woff')  format('woff');
@@ -21,3 +15,22 @@
   src:  url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
         url('../fonts/OpenSans-Semibold.woff')  format('woff');
 }
+
+@font-face {
+  font-family: Mplus-Black;
+  src:  url('../fonts/Mplus1pblack.woff2') format('woff2'),
+        url('../fonts/Mplus1pblack.woff')  format('woff');
+}
+
+@font-face {
+  font-family: Mplus-ExtraBold;
+  src:  url('../fonts/Mplus1pextrabold.woff2') format('woff2'),
+        url('../fonts/Mplus1pextrabold.woff')  format('woff');
+}
+
+@font-face {
+  font-family: Mplus-Medium;
+  src:  url('../fonts/Mplus1pmedium.woff2') format('woff2'),
+        url('../fonts/Mplus1pmedium.woff')  format('woff');
+}
+
