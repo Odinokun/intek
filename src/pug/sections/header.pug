@@ -1,4 +1,10 @@
 // begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
+header.header
+  a(href="#").header__logo.logo
+    +svg('logo')
+
+  include ../elements/menu
+  include ../elements/header-contacts
+  include ../elements/burger
+
 // end header

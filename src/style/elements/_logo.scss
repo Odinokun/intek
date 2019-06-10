@@ -1,0 +1,35 @@
+.logo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  margin-bottom: 35px;
+  padding: 0 20px;
+
+  @include max(1600) {
+    position: relative;
+  }
+  @include max(1200) {
+    margin: 15px 0;
+  }
+  @include max(500) {
+    width: 100%;
+    svg {
+      margin: 0 auto;
+    }
+  }
+  @include max(425) {
+    margin: 0 0 15px 0;
+  }
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    fill: $dark;
+    width: 180px;
+    height: 33px;
+    transition: fill .5s;
+  }
+}

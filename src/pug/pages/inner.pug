@@ -1,57 +1,174 @@
 extends ../_template
 
-mixin test__item(bgImg, itemTitle)
-  .services__item(style="height: 200px; width: 25%; border: 1px solid #693;text-align:center;display:inline-block;")
-    .services__pic(style= 'background-image:url(assets/img/' + bgImg + '.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 100%;')
-    .services__icon
-    h3.services__title #{itemTitle}
-    a(href="#").services__link
-
 block variables
   - var title           = 'Inner'
-  - var pageHeaderTitle = 'Внутренняя страница'
-  - var description     = 'Odinokun`s start template'
-  - var ogtitle         = 'Odinokun`s start template'
+  - var pageHeaderTitle = 'Inner'
+  - var description     = 'Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
   - var ogimage         = 'assets/img/social.jpg'
+  - var breadCrumbs1    = 'Интек-Брокер'
+  - var breadCrumbs2    = 'О компании'
+  - var breadCrumbs3    = 'Новости'
 
 block content
-  .main-wrap.no-js
+  .main-wrap.inner
     include ../sections/header
 
     //begin content
-    section.main
+    .main
+      include ../elements/breadcrumbs
+
       .container
-        .test-mixins(style="display:flex; justify-content: space-between; margin-bottom: 50px;")
-          +test__item('social', 'hello world 1')
-          +test__item('social', 'hello world 2')
-          +test__item('social', 'hello world 3')
+        h1 Заголовок Н1
+        h2 Заголовок Н2
+        h3 Заголовок Н3
 
-        +svg('close')
-
-        h1 Заголовок 1
-        h2 Заголовок 2
-        h3 Заголовок 3
-        h4 Заголовок 4
-        h5 Заголовок 5
-        h6 Заголовок 6
-
-        p Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
+      .container
+        p Компания ООО «ИНТЭК-Брокер» создана в 2015 году профессионалами с успешным опытом в финансовой, биржевой и нефтегазовой отраслях. Сегодня компания является надежным брокером, предоставляющим услуги на биржевом и внебиржевом российском рынке нефтепродуктов.
         p
-          | Равным образом дальнейшее развитие различных форм деятельности играет важную роль в
+          strong Основное направление деятельности —
           =" "
-          a(href="#") формировании форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения
-          =" "
-          | прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений.
+          |торговля темными и светлыми нефтепродуктами, нефтехимией, сжиженными углеводородами и маслами на крупнооптовом, мелкооптовом и розничном рынках.
+      .container
+        p.small-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
 
-        ol
-          li Пункт 1
-          li Пункт 2
-          li Пункт 3
+      //begin half section
+      .container
+        .half-section-wrap
+          .half-section
+            p.small-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin
+          .half-section
+            p.small-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin
+      //end half section
 
+      .container
         ul
-          li Пункт 1
-          li Пункт 2
-          li Пункт 3
-    //end content
+          li Крупнооптовый трейдер
+          li Постоянные поставки
+          li 100 топлива
 
-    include ../sections/footer
+      .container
+        ol
+          li Крупнооптовый трейдер
+          li Постоянные поставки
+          li 100 топлива
+
+      //begin table section
+      .container
+        .table-wrap
+          .table
+            .table__row.table__row--header
+              .table__item
+                span Колонка 1
+              .table__item
+                span Колонка 2
+              .table__item
+            .table__row
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                a(href="#").table__download
+                  +svg('download')
+                  span Скачать
+            .table__row
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                a(href="#").table__download
+                  +svg('download')
+                  span Скачать
+            .table__row
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                span Приказ о назначении Директора Общества
+              .table__item
+                a(href="#").table__download
+                  +svg('download')
+                  span Скачать
+
+      //end table section
+
+      //begin picture section
+      .container
+        .picture-section
+          .picture-section__item
+            img(src="assets/img/inner.jpg" alt="image")
+          .picture-section__item
+            img(src="assets/img/inner.jpg" alt="image")
+            .picture-section__signature
+              span Текст подписи к изображению
+              span Текст подписи к изображению
+      //end picture section
+
+      .container.btn-container
+        .btn
+          a(href="#") action
+        .btn-light
+          button action
+        .btn-light
+          input(type='submit' value='action')
+
+      //begin banner
+      .container
+        .banner(style='background-image: url("assets/img/bg-banner.jpg")')
+          h2.banner__title Заголовок рекламного блока
+          .btn
+            a(href="#") подробнее
+      //end banner
+
+      //begin quintet
+      .container
+        .quintet
+          .quintet__item
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          .quintet__item
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          .quintet__item
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          .quintet__item
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          .quintet__item.quintet__item--pic(style='background-image: url("assets/img/quintet.jpg")')
+            h2.quintet__title Заголовок рекламного блока
+      //end quintet
+
+      //begin form
+      .container
+        h2.form__title Есть вопрос?
+        form.form
+          .form__row.form__row-input
+            input.form__input(placeholder='ФИО контактного лица*' required)
+            input.form__input(placeholder='Контактный телефон*' required)
+            select.custom-select
+              option(value='Выпадающий список') Выпадающий список
+              option(value='Выпадающий список') Выпадающий список 2
+              option(value='Выпадающий список') Выпадающий список 3
+          .form__row
+            .radio__list
+              label.radio
+                input(type='radio' name='radio' checked).radio__input
+                span.radio__text Пункт первый
+              label.radio
+                input(type='radio' name='radio').radio__input
+                span.radio__text Пункт второй
+              label.radio
+                input(type='radio' name='radio').radio__input
+                span.radio__text Пункт третий
+          .form__row
+            textarea(placeholder='Текстовое поле').textarea
+          .form__row
+            label.checkbox
+              input(type='checkbox').checkbox__input
+              span.checkbox__text
+                |Подтверждаю согласие с
+                =" "
+                a(href="#") политикой обработки персональных данных
+          .form__row
+            .btn
+              input(type='submit' value='отправить')
+      //end form
+    //end content

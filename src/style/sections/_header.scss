@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  min-height: 120px;
+  background-color: rgba(0, 0, 0, .3);
+
+  @include max(1200) {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @include max(760) {
+    justify-content: space-between;
+    min-height: 80px;
+  }
+  @include max(500) {
+    justify-content: center;
+  }
+  @include max(425) {
+    padding: 10px;
+  }
+}
