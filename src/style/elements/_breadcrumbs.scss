@@ -1,3 +1,14 @@
+.breadcrumbs {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 15px 25px 15px;
+
+  @include max(425) {
+    padding: 20px 10px;
+  }
+}
+
 .breadcrumbs__list {
   display: flex;
   flex-wrap: wrap;
