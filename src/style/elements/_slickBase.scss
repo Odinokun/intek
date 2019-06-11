@@ -4,6 +4,9 @@
 }
 .slick-slider {
   user-select: auto;
+  * {
+    outline: none;
+  }
 }
 
 /* Arrows */
