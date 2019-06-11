@@ -5,11 +5,9 @@ module.exports = [
 
   // include jQuery UI
   './src/vendors/jquery-ui/jquery-ui.min.css',
-  // './src/vendors/jquery-ui/jquery-ui.structure.min.css',
-  // './src/vendors/jquery-ui/jquery-ui.theme.min.css',
 
   // include Slick slider
-  // './node_modules/slick-carousel/slick/slick.css',
+  './node_modules/slick-carousel/slick/slick.css'
 
   // include fancybox3
   // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
