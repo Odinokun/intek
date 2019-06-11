@@ -72,6 +72,9 @@ p {
   font-size: 17px;
   line-height: 28px;
   margin-bottom: 27px;
+  strong {
+    font-family:$font-semibold;
+  }
 }
 
 p:last-child {

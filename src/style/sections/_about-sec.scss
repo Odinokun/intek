@@ -9,10 +9,11 @@
     width: 45%;
     max-width: 800px;
     content: '';
-    background-size: contain;
     background-image: url('../img/bg-about-sec.jpg');
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
+
     @include max(1330) {
       opacity: .6;
     }
@@ -27,6 +28,7 @@
   margin-left: auto;
   padding-top: 120px;
   padding-bottom: 115px;
+
   @include max(1330) {
     padding-top: 60px;
     padding-bottom: 50px;
@@ -38,14 +40,17 @@
   font-size: 40px;
   line-height: 55px;
   margin-bottom: 70px;
+
   @include max(1020) {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 30px;
   }
 }
+
 .about-sec__btn {
   margin-top: 50px;
+
   @include max(1020) {
     margin-top: 30px;
   }
