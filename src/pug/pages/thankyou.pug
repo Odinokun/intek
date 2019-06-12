@@ -1,0 +1,25 @@
+extends ../_template
+
+block variables
+  - var title           = 'Thank you | Интек Брокер'
+  - var pageHeaderTitle = 'Thank you | Интек Брокер'
+  - var description     = 'Thank you | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.thankyou
+    include ../sections/header
+
+    //begin content
+    .main
+      .container
+        .thankyou__capture
+          h2.thankyou__title Спасибо за регистрацию!
+          span.thankyou__text Мы свяжемся с вами в ближайшее время!
+          .btn.btn-thankyou
+            a(href="#") на главную
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
