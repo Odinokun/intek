@@ -1,7 +1,8 @@
 module.exports = function() {
 
   // begin popup open
-  $('.btn-popup').on('click', function() {
+  $('.btn-popup').on('click', function(e) {
+    e.preventDefault();
     var dataPopup = $(this).data('popup');
     var popup = '#' + dataPopup;
     $(popup).fadeIn();

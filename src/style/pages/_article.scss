@@ -15,6 +15,7 @@
   @include max(670) {
     padding-bottom: 50px;
   }
+
   p {
     font-size: 15px;
     line-height: 26px;
@@ -85,6 +86,7 @@
   @include max(670) {
     width: 100%;
   }
+
   a {
     padding-right: 70px;
     padding-left: 70px;
