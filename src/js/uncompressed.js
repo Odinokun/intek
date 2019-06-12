@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'inner',
     '404',
-    'thankyou'
+    'thankyou',
+    'article'
     ]);
 });
 
