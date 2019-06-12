@@ -1,0 +1,22 @@
+mixin partners-sec__item(img, img2, name, name2)
+  .partners-sec__item
+    .partners-sec__partner
+      img(src="assets/img/partners/partner-" + img + ".jpg" alt="partner`s logo")
+      .partners-sec__cover
+        span #{name}
+    .partners-sec__partner
+      img(src="assets/img/partners/partner-" + img2 + ".jpg" alt="partner`s logo")
+      .partners-sec__cover
+        span #{name2}
+// begin partners-sec
+.partners-sec
+  .container
+    .partners-sec__header
+      h2.partners-sec__title Партнеры
+    .partners-sec__slider#partners-sec__slider
+      +partners-sec__item('01', '02', 'Лукойл', 'Роснефть')
+      +partners-sec__item('03', '04', 'Газпром', 'Сургутэкс')
+      +partners-sec__item('05', '06', 'Сургут Нефть Газ', 'ТатНефть')
+      +partners-sec__item('07', '08', 'Альфа Банк', 'Биржа Санкт Петербург')
+      +partners-sec__item('09', '10', 'СПбМТСБ', 'РiД')
+// end partners-sec

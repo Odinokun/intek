@@ -1,4 +1,4 @@
-module.exports = function() {
+module.exports = function () {
 
   // begin top-slider
   $('#index-top__slider').slick({
@@ -18,7 +18,7 @@ module.exports = function() {
     slidesToScroll: 6,
     asNavFor: '#index-top__slider',
     focusOnSelect: true,
-    variableWidth:true
+    variableWidth: true
   });
   // end top-slider
 
@@ -29,12 +29,11 @@ module.exports = function() {
     dots: false,
     infinite: true,
     speed: 500,
-    // autoplay: true,
     cssEase: 'linear',
     responsive: [
       {
         breakpoint: 577,
-        settings:{
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1
 
@@ -43,5 +42,31 @@ module.exports = function() {
     ]
   });
   // end why-we-slider
+
+  // begin partners-sec__slider
+  $('#partners-sec__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    // autoplay: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 761,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 501,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  // end partners-sec__slider
 
 };
