@@ -1,0 +1,46 @@
+.thankyou {
+  background-image: url('../img/bg-thankyou.jpg');
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+}
+
+.thankyou__capture {
+  padding-top: 330px;
+  padding-bottom: 240px;
+
+  @include max(1020) {
+    padding-top: 200px;
+    padding-bottom: 150px;
+  }
+}
+
+.thankyou__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.thankyou__text {
+  font-size: 17px;
+  line-height: 28px;
+  display: block;
+  margin-bottom: 90px;
+}
+
+.btn-thankyou {
+  a {
+    padding-right: 105px;
+    padding-left: 105px;
+
+    @include max(450) {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
+  }
+}
