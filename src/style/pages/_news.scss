@@ -36,6 +36,7 @@
   padding: 38px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
+
   @include max(1020) {
     width: 48.5%;
   }

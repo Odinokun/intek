@@ -6,7 +6,7 @@ mixin news__item(title)
     .news__date 09.05.2019
     h2.news__title #{title}
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-    a(href="#").news__learn-more
+    a(href="#").news__learn-more.btn-popup(data-popup='popup-news-01')
       +svg('message')
       span читать новость
 
