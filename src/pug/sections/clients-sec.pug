@@ -1,0 +1,32 @@
+mixin clients-gallery__item(img)
+  .clients-gallery__item
+    .clients-gallery__cover(style='background-image:url("assets/img/clients/client-' + img + '.jpg")')
+      h3.clients-gallery__cover-title ООО "Трейдер"
+    h3.clients-gallery__title ООО "Трейдер"
+    ul.clients-gallery__list
+      li Крупнооптовый трейдер
+      li Постоянные поставки
+      li 100 топлива
+    .clients-gallery__tags
+      span.clients-gallery__tag Поставки
+      span.clients-gallery__tag Оптовые партии
+    a(href="#").clients-gallery__learn-more
+      +svg('message')
+      span читать отзыв
+
+// begin clients-sec
+.clients-sec
+  .container
+    .clients-sec__header
+      h2.clients-sec__title Клиенты
+  .clients-sec__gallery.clients-gallery
+    +clients-gallery__item('01')
+    +clients-gallery__item('02')
+    +clients-gallery__item('03')
+    +clients-gallery__item('04')
+  .container
+    .clients-sec__footer
+      .btn
+        a(href="#") посмотреть все
+
+// end clients-sec

@@ -1,0 +1,22 @@
+.clients-sec__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 60px;
+
+  @include max(1200) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.clients-sec__footer {
+  .btn {
+    margin-top: 25px;
+  }
+}

@@ -1,13 +1,16 @@
 .why-we {
+  margin-bottom: -410px;
   padding-top: 130px;
   padding-bottom: 500px;
   background-image: url('../img/bg-why-we.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0;
 
+  @include max(1200) {
+    padding-bottom: 400px;
+  }
   @include max(1020) {
     padding-top: 50px;
-    padding-bottom: 200px;
   }
   .container {
     display: flex;
