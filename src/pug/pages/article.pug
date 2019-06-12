@@ -1,0 +1,46 @@
+extends ../_template
+
+block variables
+  - var title           = 'Название новости | Интек Брокер'
+  - var pageHeaderTitle = 'Название новости | Интек Брокер'
+  - var description     = 'Название новости | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var breadCrumbs1    = 'Интек-Брокер'
+  - var breadCrumbs2    = 'Новости'
+  - var breadCrumbs3    = 'Название новости'
+
+block content
+  .main-wrap.article-page
+    include ../sections/header
+
+    //begin content
+    .main
+      include ../elements/breadcrumbs
+      .container
+        article.article
+          h1.article__title Название новости
+          .article__data
+            +svg('calendar')
+            span 09.05.2019
+          .article__pic
+            img(src="assets/img/article-pic.jpg" alt="article image")
+          h2.article__subtitle-lg Подзаголовок
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          ul
+            li Крупнооптовый трейдер
+            li Постоянные поставки
+            li 100 топлива
+          h3.article__subtitle-sm Подзаголовок
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          .article__pagination
+            .btn.article__pagination-btn
+              a(href="#") Предыдущая новость
+            .btn.article__pagination-btn
+              a(href="#") Следующая новость
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

@@ -137,6 +137,7 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
+
 input {
   font-size: 15px;
   padding: 20px 30px;
@@ -149,6 +150,7 @@ input {
     @include placeholder-color($text);
   }
 }
+
 textarea {
   font-size: 15px;
   padding: 20px 30px;
@@ -208,6 +210,7 @@ svg {
 .btn,
 .btn-light {
   display: inline-block;
+  text-align: center;
   border-radius: 3px;
   a,
   button,
@@ -263,6 +266,7 @@ svg {
     background-color: #fff;
   }
 }
+
 .btn-lg {
   a,
   button,
