@@ -72,6 +72,9 @@ p {
   font-size: 17px;
   line-height: 28px;
   margin-bottom: 27px;
+  strong {
+    font-family: $font-semibold;
+  }
 }
 
 p:last-child {
@@ -120,6 +123,7 @@ ol {
   list-style: none;
 
   @include counter(li);
+
   li::before {
     margin-right: 20px;
     color: $highlight;
@@ -133,19 +137,27 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
-
 input {
-  padding: 15px 30px;
-  color: $text;
+  font-size: 15px;
+  padding: 20px 30px;
+  color: #969696;
   border: 1px solid #e6e6e6;
   border-radius: 3px !important;
+  outline: none;
+  background-color: #fff;
   &::placeholder {
     @include placeholder-color($text);
   }
 }
-
 textarea {
+  font-size: 15px;
+  padding: 20px 30px;
   resize: none;
+  color: #969696;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px !important;
+  outline: none;
+  background-color: #fff;
 }
 
 input.error,
@@ -179,7 +191,6 @@ svg {
 
 .main {
   flex-grow: 1;
-  padding-top: 240px;
 }
 
 .container {
@@ -208,6 +219,7 @@ svg {
     cursor: pointer;
     transition: .5s;
     text-decoration: none;
+    text-transform: lowercase;
     border: none;
     box-shadow: none;
   }
@@ -226,7 +238,7 @@ svg {
   a,
   button,
   input {
-    padding: 20px 80px;
+    padding: 22px 82px;
     color: #fff;
     background-color: transparent;
   }
@@ -246,8 +258,21 @@ svg {
   a,
   button,
   input {
-    padding: 18px 78px;
+    padding: 20px 80px;
     color: $highlight;
     background-color: #fff;
+  }
+}
+.btn-lg {
+  a,
+  button,
+  input {
+    padding-right: 110px;
+    padding-left: 110px;
+
+    @include max(425) {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
   }
 }

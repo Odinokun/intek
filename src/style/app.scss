@@ -11,12 +11,19 @@
  @import 'elements/breadcrumbs';
  @import 'elements/burger';
 // @import 'elements/pagination';
-// @import 'elements/popup';
-// @import 'elements/slickBase';
+ @import 'elements/popup';
+ @import 'elements/slickBase';
+ @import 'elements/clients-gallery';
 
 //section
 @import 'sections/footer';
 @import 'sections/header';
+@import 'sections/index-top';
+@import 'sections/about-sec';
+@import 'sections/why-we';
+@import 'sections/clients-sec';
+@import 'sections/partners-sec';
+@import 'sections/index-form-section';
 
 //pages
 @import 'pages/inner';

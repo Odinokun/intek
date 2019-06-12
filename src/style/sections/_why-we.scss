@@ -1,0 +1,187 @@
+.why-we {
+  margin-bottom: -410px;
+  padding-top: 130px;
+  padding-bottom: 500px;
+  background-image: url('../img/bg-why-we.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @include max(1200) {
+    padding-bottom: 400px;
+  }
+  @include max(1020) {
+    padding-top: 50px;
+  }
+  .container {
+    display: flex;
+
+    @include max(1200) {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.why-we__item {
+  flex: none;
+}
+
+.why-we__item--left {
+  width: 60%;
+
+  @include max(1650) {
+    width: 50%;
+  }
+  @include max(1440) {
+    width: 40%;
+  }
+  @include max(1200) {
+    width: auto;
+  }
+}
+
+.why-we__item--right {
+  width: 40%;
+
+  @include max(1200) {
+    width: auto;
+  }
+}
+
+.why-we__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 85px;
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.why-we__list {
+  margin-bottom: 60px;
+  li {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+}
+
+.why-we__btn {
+  margin-top: 50px;
+
+  @include max(1020) {
+    margin-top: 30px;
+  }
+}
+
+//begin why-we-slider
+.why-we-slider {
+  overflow: hidden;
+  width: calc(100% + 230px);
+  height: 290px;
+  transform: translateY(50%);
+
+  @include max(1200) {
+    max-width: 700px;
+    margin-top: 50px;
+    transform: translate(-110px, 0%);
+  }
+  @include max(760) {
+    overflow: visible;
+    width: 100%;
+    transform: translate(0);
+  }
+
+  .slick-list {
+    overflow: visible;
+    width: 470px !important;
+
+    @include max(760) {
+      overflow: hidden;
+    }
+    @include max(576) {
+      width: 240px !important;
+    }
+  }
+  .slick-prev {
+    display: none;
+
+    @include max(760) {
+      display: block;
+    }
+  }
+  .slick-next {
+    right: 100px;
+
+    @include max(760) {
+      right: -25px;
+    }
+  }
+}
+
+.why-we-slider__item {
+  position: relative;
+  width: 210px;
+  height: 300px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .5s;
+  opacity: 1;
+  background-color: #fff;
+  &:hover {
+    &[aria-hidden='false'] {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &[aria-hidden='false'] {
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      content: '';
+      transition: opacity .5s;
+      pointer-events: none;
+      opacity: 0;
+    }
+    &::before {
+      width: 60px;
+      height: 60px;
+      background-color: $highlight;
+      background-image: linear-gradient(to right, #faa61a 0%, #ffcb05 100%);
+    }
+    &::after {
+      width: 25px;
+      height: 25px;
+      background-image: url('../img/magnific.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+  &[aria-hidden='true'] {
+    transition: .5s;
+    pointer-events: none;
+    opacity: .3;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+//end why-we-slider
