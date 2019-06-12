@@ -73,7 +73,7 @@ p {
   line-height: 28px;
   margin-bottom: 27px;
   strong {
-    font-family:$font-semibold;
+    font-family: $font-semibold;
   }
 }
 
@@ -137,19 +137,27 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
-
 input {
-  padding: 15px 30px;
-  color: $text;
+  font-size: 15px;
+  padding: 20px 30px;
+  color: #969696;
   border: 1px solid #e6e6e6;
   border-radius: 3px !important;
+  outline: none;
+  background-color: #fff;
   &::placeholder {
     @include placeholder-color($text);
   }
 }
-
 textarea {
+  font-size: 15px;
+  padding: 20px 30px;
   resize: none;
+  color: #969696;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px !important;
+  outline: none;
+  background-color: #fff;
 }
 
 input.error,
@@ -259,12 +267,12 @@ svg {
   a,
   button,
   input {
-    padding-left: 110px;
     padding-right: 110px;
-    @include max(425) {
-      padding-left: 80px;
-      padding-right: 80px;
+    padding-left: 110px;
 
+    @include max(425) {
+      padding-right: 80px;
+      padding-left: 80px;
     }
   }
 }
