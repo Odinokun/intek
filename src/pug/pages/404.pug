@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title           = 'Интек Брокер'
+  - var pageHeaderTitle = 'Интек Брокер'
+  - var description     = 'Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.error
+    include ../sections/header
+
+    //begin content
+    .main
+      .error__pic
+        img(src="assets/img/bg-404.jpg" alt="image")
+      .container
+        .error__capture
+          h2.error__title 404
+          span.error__subtitle Упс... здесь нефти нет
+          span.error__text Вы можете попробовать найти интересующую вас информацию в верхнем меню, или вернуться
+          .btn.btn-404
+            a(href="#") на главную
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
