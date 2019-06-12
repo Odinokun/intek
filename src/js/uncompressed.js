@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'inner',
     '404',
     'thankyou',
-    'article'
+    'article',
+    'news'
     ]);
 });
 

@@ -1,0 +1,47 @@
+extends ../_template
+
+mixin news__item(title)
+  .news__item
+    .news__cover(style="background-image:url('assets/img/news-preview.jpg')")
+    .news__date 09.05.2019
+    h2.news__title #{title}
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+    a(href="#").news__learn-more
+      +svg('message')
+      span читать новость
+
+
+block variables
+  - var title           = 'Название новости | Интек Брокер'
+  - var pageHeaderTitle = 'Название новости | Интек Брокер'
+  - var description     = 'Название новости | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var breadCrumbs1    = 'Интек-Брокер'
+  - var breadCrumbs2    = 'О компании'
+  - var breadCrumbs3    = 'Новости'
+
+block content
+  .main-wrap.news-page
+    include ../sections/header
+
+    //begin content
+    .main
+      include ../elements/breadcrumbs
+      .container
+        h1.news-page__title Новости
+        .news-page__list
+          +news__item('Интэк-брокер - новость о компании')
+          +news__item('Интэк-брокер - новость о компании в три строки')
+          +news__item('Интэк-брокер - новость о компании в три строки')
+          +news__item('Интэк-брокер - новость о компании')
+          +news__item('Интэк-брокер - новость о компании в три строки')
+          +news__item('Интэк-брокер - новость о компании')
+          +news__item('Интэк-брокер - новость о компании')
+          +news__item('Интэк-брокер - новость о компании в три строки')
+          +news__item('Интэк-брокер - новость о компании')
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
