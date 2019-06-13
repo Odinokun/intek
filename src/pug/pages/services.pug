@@ -1,0 +1,53 @@
+extends ../_template
+
+mixin services__item(title, pic)
+  .services__item
+    .services__cover
+    .services__item-left
+      h2.services__title #{title}
+      p Компания «ИНТЭК-Брокер» является аккредитованным брокером и участником торгов на товарных биржах Российской Федерации и оказывает брокерские услуги на товарном рынке РФ, обслуживает клиентские биржевые операции на топливно-энергетическом рынке.
+    .services__item-right
+      img(src="assets/img/services/services-preview-" + pic + ".jpg" alt="services-preview")
+      a(href="#").services__learn-more
+        +svg('plus')
+        span подробнее
+
+
+block variables
+  - var title           = 'Услуги компании | Интек Брокер'
+  - var pageHeaderTitle = 'Услуги компании | Интек Брокер'
+  - var description     = 'Услуги компании | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.services-page
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Услуги компании
+      //end breadcrumbs
+
+      .container
+        h1.services-page__title Услуги компании
+        p Лицензии, разрешающие деятельность компании. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci.
+
+        .services-page__list
+          +services__item('Брокерское обслуживание', '01')
+          +services__item('Поставка нефтепродуктов', '02')
+          +services__item('Транспортировка продукции', '03')
+          +services__item('Аналитика рынка', '04')
+          +services__item('Внебиржевой рынок', '05')
+          +services__item('Товарное финансирование', '06')
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
