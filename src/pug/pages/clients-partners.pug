@@ -1,0 +1,87 @@
+extends ../_template
+
+mixin clients-gallery__item(img)
+  .clients-gallery__item
+    .clients-gallery__cover(style='background-image:url("assets/img/clients/client-' + img + '.jpg")')
+      h3.clients-gallery__cover-title ООО "Трейдер"
+    h3.clients-gallery__title ООО "Трейдер"
+    ul.clients-gallery__list
+      li Крупнооптовый трейдер
+      li Постоянные поставки
+      li 100 топлива
+    .clients-gallery__tags
+      span.clients-gallery__tag Поставки
+      span.clients-gallery__tag Оптовые партии
+    a(href="#").clients-gallery__learn-more
+      +svg('message')
+      span читать отзыв
+
+mixin partners-sec__item(img, img2, name, name2)
+  .partners-sec__item
+    .partners-sec__partner
+      img(src="assets/img/partners/partner-" + img + ".jpg" alt="partner`s logo")
+      .partners-sec__cover
+        span #{name}
+    .partners-sec__partner
+      img(src="assets/img/partners/partner-" + img2 + ".jpg" alt="partner`s logo")
+      .partners-sec__cover
+        span #{name2}
+
+block variables
+  - var title           = 'Клиенты и партнеры | Интек Брокер'
+  - var pageHeaderTitle = 'Клиенты и партнеры | Интек Брокер'
+  - var description     = 'Клиенты и партнеры | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.clients-partners
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") О компании
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Клиенты и партнеры
+      //end breadcrumbs
+
+      .container.clients-partners__top-container
+        h1.clients-partners__title Клиенты и партнеры
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+      .container
+        .clients-sec__header
+          h2.clients-sec__title Клиенты
+      .clients-sec__gallery.clients-gallery
+        +clients-gallery__item('01')
+        +clients-gallery__item('02')
+        +clients-gallery__item('03')
+        +clients-gallery__item('04')
+        +clients-gallery__item('05')
+        +clients-gallery__item('06')
+        +clients-gallery__item('07')
+        +clients-gallery__item('08')
+
+      // begin partners-sec
+      .partners-sec
+        .container
+          .partners-sec__header
+            h2.partners-sec__title Партнеры
+          .partners-sec__slider#partners-sec__slider
+            +partners-sec__item('01', '02', 'Лукойл', 'Роснефть')
+            +partners-sec__item('03', '04', 'Газпром', 'Сургутэкс')
+            +partners-sec__item('05', '06', 'Сургут Нефть Газ', 'ТатНефть')
+            +partners-sec__item('07', '08', 'Альфа Банк', 'Биржа Санкт Петербург')
+            +partners-sec__item('09', '10', 'СПбМТСБ', 'РiД')
+      // end partners-sec
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

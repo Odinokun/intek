@@ -12,7 +12,8 @@ $(document).ready(function ($) {
     'article',
     'news',
     'services',
-    'documents'
+    'documents',
+    'clients-partners'
     ]);
 });
 
