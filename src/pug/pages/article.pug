@@ -6,9 +6,6 @@ block variables
   - var description     = 'Название новости | Интек Брокер'
   - var ogtitle         = 'Интек Брокер'
   - var ogimage         = 'assets/img/social.jpg'
-  - var breadCrumbs1    = 'Интек-Брокер'
-  - var breadCrumbs2    = 'Новости'
-  - var breadCrumbs3    = 'Название новости'
 
 block content
   .main-wrap.article-page
@@ -16,7 +13,19 @@ block content
 
     //begin content
     .main
-      include ../elements/breadcrumbs
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") О компании
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Новости
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Название новости
+      //end breadcrumbs
+
       .container
         article.article
           h1.article__title Название новости

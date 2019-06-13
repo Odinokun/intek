@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     '404',
     'thankyou',
     'article',
-    'news'
+    'news',
+    'services'
     ]);
 });
 
