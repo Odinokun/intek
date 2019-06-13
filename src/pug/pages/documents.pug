@@ -1,0 +1,118 @@
+extends ../_template
+
+mixin documents-tab__body-row
+  .documents-tab__body-row
+    .documents-tab__body-row-inn
+      .documents-tab__body-item
+        span Приказ о назначении Директора Общества
+      .documents-tab__body-item.documents-tab__body-item--download
+        +svg('download')
+        span скачать
+
+block variables
+  - var title           = 'Документы | Интек Брокер'
+  - var pageHeaderTitle = 'Документы | Интек Брокер'
+  - var description     = 'Документы | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.documents
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") О компании
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Документы
+      //end breadcrumbs
+
+      .container
+        .documents__item.documents__item--left
+          h1.documents__title Документы
+          p Лицензии, разрешающие деятельность компании Aenean euismod bibendum laoreet.
+          p Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+
+        .documents__item.documents__item--right
+          // begin why-we-slider
+          .documents-slider#why-we-slider
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
+                img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
+                img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
+                img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
+                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
+                img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
+                img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
+            .documents-slider__item
+              a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
+                img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
+          // end why-we-slider
+
+
+
+      .documents-tab
+        .documents-tab__item
+          .documents-tab__header
+            .documents-tab__header-inn
+              span.tab-btn
+              h3.documents-tab__title Учредительные документы
+          .documents-tab__body
+            +documents-tab__body-row
+            +documents-tab__body-row
+            +documents-tab__body-row
+            +documents-tab__body-row
+            +documents-tab__body-row
+        .documents-tab__item
+          .documents-tab__header
+            .documents-tab__header-inn
+              span.tab-btn
+              h3.documents-tab__title Регламенты и приложения
+          .documents-tab__body
+            +documents-tab__body-row
+            +documents-tab__body-row
+            +documents-tab__body-row
+        .documents-tab__item
+          .documents-tab__header
+            .documents-tab__header-inn
+              span.tab-btn
+              h3.documents-tab__title Документы товарных бирж
+          .documents-tab__body
+            +documents-tab__body-row
+            +documents-tab__body-row
+            +documents-tab__body-row
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

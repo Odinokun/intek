@@ -15,7 +15,7 @@ $(function() {
   // begin jquery-ui
   require('./modules/jquery-ui')();
 
-  // begin Fancybox3
-  // require('./modules/fancybox')();
+  // begin tabs
+  require('./modules/tabs')();
 
 });
