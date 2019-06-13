@@ -43,6 +43,27 @@ module.exports = function () {
   });
   // end why-we-slider
 
+  // begin documents-slider
+  $('#documents-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+
+        }
+      }
+    ]
+  });
+  // end documents-slider
+
   // begin partners-sec__slider
   $('#partners-sec__slider').slick({
     slidesToShow: 3,

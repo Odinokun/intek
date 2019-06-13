@@ -11,7 +11,8 @@ $(document).ready(function ($) {
     'thankyou',
     'article',
     'news',
-    'services'
+    'services',
+    'documents'
     ]);
 });
 
