@@ -1,0 +1,120 @@
+extends ../_template
+
+mixin vacancies-tab__body-row
+  .vacancies-tab__body-row
+    .vacancies-tab__body-row-inn
+      h3.vacancies-tab__body-title Должностные обязанности:
+      ul.vacancies-tab__body-list
+        li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
+        li Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor
+        li Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus
+
+      h3.vacancies-tab__body-title Требования:
+      ul.vacancies-tab__body-list
+        li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet
+        li Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor
+        li Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus
+
+      h3.vacancies-tab__body-title Условия:
+      ul.vacancies-tab__body-list
+        li Официальное трудоустройство согласно ТК РФ, социальный пакет
+        li График работы 5/2 с 09:00 до 18:00 (пятница до 16:30)
+        li Официальная заработная плата, 2 раза в месяц на карту банка
+      .btn.vacancies-tab__btn
+        button Заполнить анкету соискателя
+
+block variables
+  - var title           = 'Вакансии | Интек Брокер'
+  - var pageHeaderTitle = 'Вакансии | Интек Брокер'
+  - var description     = 'Вакансии | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.vacancies
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Вакансии
+      //end breadcrumbs
+
+      .container
+        h1.vacancies__title Вакансии
+        p
+          |Компания приглашает Вас стать частью нашей команды. Если Вас заинтересовала одна из перечисленных в разделе вакансий, заполните "анкету соискателя" или направьте резюме на электронную почту
+          =' '
+          a(href="mailto:job@intek-broker.com") job@intek-broker.com
+
+      // begin vacancies-tab
+      .vacancies-tab
+        .vacancies-tab__item
+          .vacancies-tab__header
+            .vacancies-tab__header-inn
+              span.tab-btn
+              h3.vacancies-tab__title Менеджер
+          .vacancies-tab__body
+            +vacancies-tab__body-row
+        .vacancies-tab__item
+          .vacancies-tab__header
+            .vacancies-tab__header-inn
+              span.tab-btn
+              h3.vacancies-tab__title Менеджер по персоналу
+          .vacancies-tab__body
+            +vacancies-tab__body-row
+        .vacancies-tab__item
+          .vacancies-tab__header
+            .vacancies-tab__header-inn
+              span.tab-btn
+              h3.vacancies-tab__title Менеджер
+          .vacancies-tab__body
+            +vacancies-tab__body-row
+        .vacancies-tab__item
+          .vacancies-tab__header
+            .vacancies-tab__header-inn
+              span.tab-btn
+              h3.vacancies-tab__title Менеджер
+          .vacancies-tab__body
+            +vacancies-tab__body-row
+      // end vacancies-tab
+
+      .container
+        .btn.hh-btn
+              a(href="#")
+                img(src="assets/img/hh.png" alt="hh")
+                span вакансии на HH
+
+      // begin vacancies-form-section
+      .vacancies-form-section
+        .vacancies-form-section__inn
+          .container
+            h2.vacancies-form-section__title Хотите к нам?
+            p Если Вы хотите у нас работать, заполните форму ниже
+            .vacancies-form
+              .vacancies-form__item.vacancies-form__item--left
+                input(placeholder="ФИО").vacancies-form__input
+                input(placeholder="Контактные данные*" required).vacancies-form__input
+                .vacancies-form__add-resume
+                  input(type='file').vacancies-form__input
+                  +svg('clip')
+                  span прикрепить файл резюме
+              .vacancies-form__item.vacancies-form__item--right
+                textarea(placeholder="Комментарий*" required).vacancies-form__textarea
+                .vacancies-form__row.form__row
+                  label.checkbox
+                    input(type='checkbox').checkbox__input
+                    span.checkbox__text Я даю согласие на обработку персональных данных*
+              .vacancies-form__row
+                .btn.btn-lg
+                  input(type="submit" value="отправить")
+      // end vacancies-form-section
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

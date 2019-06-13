@@ -14,4 +14,18 @@ module.exports = function () {
   });
   // end documents-tab
 
+  // begin vacancies-tab
+  $('.vacancies-tab__header').on('click', function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).siblings('.vacancies-tab__body').slideUp();
+    } else {
+      $('.vacancies-tab__header').removeClass('active');
+      $('.vacancies-tab__body').slideUp();
+      $(this).addClass('active');
+      $(this).siblings('.vacancies-tab__body').slideDown();
+    }
+  });
+  // end vacancies-tab
+
 };

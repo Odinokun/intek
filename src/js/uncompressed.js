@@ -13,7 +13,8 @@ $(document).ready(function ($) {
     'news',
     'services',
     'documents',
-    'clients-partners'
+    'clients-partners',
+    'vacancies'
     ]);
 });
 
