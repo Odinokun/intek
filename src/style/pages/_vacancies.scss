@@ -1,0 +1,312 @@
+.vacancies {
+  padding-top: 243px;
+  background-image: url('../img/bg-vacancies.jpg');
+  background-repeat: no-repeat;
+  background-position: 69% 0;
+
+  @include max(1024) {
+    padding-top: 150px;
+  }
+}
+
+.vacancies__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  margin-bottom: 63px;
+
+  @include max(670) {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+}
+
+//begin documents-tab
+.vacancies-tab {
+  width: 100%;
+  max-width: 1650px;
+  margin: 30px auto 30px;
+  padding: 0 15px;
+
+  @include max(425) {
+    padding: 0 10px;
+  }
+}
+
+.vacancies-tab__item {
+  overflow: hidden;
+  &:first-child {
+    .vacancies-tab__header {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+}
+
+.vacancies-tab__header {
+  cursor: pointer;
+  border-bottom: 1px solid #e6e6e6;
+  &:hover {
+    .vacancies-tab__title {
+      color: $highlight;
+    }
+  }
+  &.active {
+    .vacancies-tab__title {
+      color: $highlight;
+    }
+    .tab-btn {
+      transform: rotate(360deg);
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.vacancies-tab__header-inn {
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 24px 0 20px 0;
+}
+
+.tab-btn {
+  position: relative;
+  display: flex;
+  flex: none;
+  width: 27px;
+  height: 27px;
+  margin-right: 33px;
+  transition: transform .5s;
+  border: 3px solid $highlight;
+  border-radius: 50%;
+
+  @include max(530) {
+    margin-right: 10px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 11px;
+    height: 3px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 1;
+    background-color: $highlight;
+  }
+  &::before {
+    top: 9px;
+    left: 5px;
+  }
+  &::after {
+    top: 9px;
+    left: 5px;
+    transform: rotate(90deg);
+  }
+}
+
+.vacancies-tab__title {
+  font-family: $font-extrabold;
+  font-size: 25px;
+  transition: color .5s;
+
+  @include max(530) {
+    font-size: 20px;
+  }
+}
+
+.vacancies-tab__body {
+  display: none;
+}
+
+.vacancies-tab__body-row {
+  background-color: #f0f0f0;
+  background-image: url('../img/bg-vacancies-accordeon.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: cover;
+}
+
+.vacancies-tab__body-row-inn {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 49px 10px 18px 60px;
+
+  @include max(530) {
+    padding-left: 40px;
+  }
+}
+
+.vacancies-tab__body-title {
+  font-family: $font-medium;
+  font-size: 20px;
+  margin-bottom: 27px;
+}
+
+.vacancies-tab__body-list {
+  margin-bottom: 30px;
+}
+
+.vacancies-tab__btn {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  a,
+  button,
+  input {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+//end documents-tab
+
+.hh-btn {
+  a {
+    display: flex;
+    align-items: center;
+    padding: 15px 65px;
+    text-transform: none;
+  }
+  img {
+    display: block;
+    margin-right: 15px;
+  }
+}
+
+.vacancies-form-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 15px 150px 15px;
+  &::before {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 220px;
+    width: 100%;
+    max-width: 771px;
+    height: 211px;
+    content: '';
+    background-image: url('../img/car.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+
+    @include max(1200) {
+      bottom: 200px;
+      max-width: 500px;
+    }
+
+    @include max(500) {
+      display: none;
+    }
+  }
+}
+
+.vacancies-form-section__inn {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding-top: 110px;
+  padding-bottom: 150px;
+  border: 20px solid transparent;
+  border-image: linear-gradient(0deg, #faa61a 0%, #ffcb05 100%);
+  border-image-slice: 1;
+
+  @include max(1330) {
+    padding-top: 50px;
+  }
+
+  @include max(500) {
+    padding-bottom: 50px;
+    border-width: 10px;
+  }
+}
+
+.vacancies-form-section__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.vacancies-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+
+.vacancies-form__item--left {
+  flex: none;
+  width: 400px;
+  padding-right: 30px;
+
+  @include max(900) {
+    flex: auto;
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.vacancies-form__item--right {
+  flex: 1;
+}
+
+.vacancies-form__row {
+  width: 100%;
+}
+
+.vacancies-form__input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.vacancies-form__add-resume {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+
+  @include max(900) {
+    margin-bottom: 30px;
+  }
+  svg {
+    position: relative;
+    z-index: 1;
+    fill: $highlight;
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+    pointer-events: none;
+  }
+  span {
+    font-family: $font-black;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    color: $highlight;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+
+.vacancies-form__textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+}
