@@ -90,4 +90,30 @@ module.exports = function () {
   });
   // end partners-sec__slider
 
+  // begin reviews-slider
+  $('#reviews-slider__list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    // autoplay: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1021,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 671,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  // end reviews-slider
+
 };
