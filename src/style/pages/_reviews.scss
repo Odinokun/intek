@@ -7,6 +7,9 @@
   @include max(1024) {
     padding-top: 150px;
   }
+  .vacancies-form-section {
+    padding-top: 80px;
+  }
 }
 
 .reviews__title {
@@ -42,7 +45,7 @@
     &::after {
       right: -100%;
       left: calc(100% - 15px);
-      background-color: rgba(255,255,255,.5);
+      background-color: rgba(255, 255, 255, .5);
     }
   }
 }
@@ -56,13 +59,15 @@
   }
   .slick-list {
     overflow: visible;
+
     @include max(1330) {
       overflow: hidden;
     }
   }
-  .slick-next{
+  .slick-next {
     z-index: 2;
     right: -180px;
+
     @include max(1560) {
       right: -50px;
     }
@@ -82,6 +87,7 @@
   margin-right: 30px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
+
   @include max(670) {
     margin-right: 0;
   }
@@ -120,19 +126,20 @@
 .reviews-slider__body {
   display: flex;
   flex-direction: column;
-  padding: 45px 30px 45px 40px;
+  padding: 35px 30px 45px 40px;
 }
 
 .reviews-slider__name {
   font-family: $font-semibold;
   font-size: 17px;
+  margin-bottom: 0;
 }
 
 .reviews-slider__position {
   font-family: $font-semibold;
   font-size: 17px;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .reviews-slider__blockquote {

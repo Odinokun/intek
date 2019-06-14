@@ -41,6 +41,7 @@ block content
         h1.reviews__title Отзывы
         p В данной рубрике Вы можете узнать, что думают клиенты компании о сотрудничестве с нами. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
 
+      // begin reviews-slider
       .reviews-slider
         .container
           .reviews-slider__list#reviews-slider__list
@@ -54,6 +55,28 @@ block content
             +reviews-slider__item('07')
             +reviews-slider__item('08')
             +reviews-slider__item('09')
+      // end reviews-slider
+      // begin vacancies-form-section
+      .vacancies-form-section
+        .vacancies-form-section__inn
+          .container
+            h2.vacancies-form-section__title Хотите оставить отзыв?
+            p Если Вы хотите оставить отзыв о нашей работе, заполните форму ниже
+            .vacancies-form
+              .vacancies-form__item.vacancies-form__item--left
+                input(placeholder="ФИО").vacancies-form__input
+                input(placeholder="Контактные данные*" required).vacancies-form__input
+
+              .vacancies-form__item.vacancies-form__item--right
+                textarea(placeholder="Комментарий*" required).vacancies-form__textarea
+              .vacancies-form__row.form__row
+                label.checkbox
+                  input(type='checkbox').checkbox__input
+                  span.checkbox__text Я даю согласие на обработку персональных данных*
+              .vacancies-form__row
+                .btn.btn-lg
+                  input(type="submit" value="отправить")
+      // end vacancies-form-section
 
     //end content
 
