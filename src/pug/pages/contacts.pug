@@ -1,0 +1,100 @@
+extends ../_template
+
+block variables
+  - var title           = 'Контакты | Интек Брокер'
+  - var pageHeaderTitle = 'Контакты | Интек Брокер'
+  - var description     = 'Контакты | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.contacts
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Контакты
+      //end breadcrumbs
+
+      .container
+        h1.contacts__title Контакты
+
+      // begin contacts-map
+      .contacts-map#map
+        .container.contacts-banner__wrap
+          .contacts-banner
+            h2.contacts-banner__title Офис в Санкт-Петербурге
+            a(href="https://yandex.ru/maps/-/CCSQJZOJ" target="_blank" rel="nofollow noopener noreferrer").contacts-banner__link Невский проспект, д.19
+            a(href="tel:88121234567").contacts-banner__link 8 (812) 123-45-67
+            a(href="mailto:intek123@intek.com").contacts-banner__link intek123@intek.com
+      // end contacts-map
+
+      // begin index-form-section
+      .index-form-section
+        .index-form-section__inn
+          .container
+            h2.index-form-section__title Есть вопрос?
+            .index-form
+              .index-form__row
+                input(placeholder="ФИО контактного лица*" required).index-form__input
+                input(placeholder="Название компании*" required).index-form__input
+                input(placeholder="ИНН и/или ОГРН*" required).index-form__input
+                input(placeholder="Ваш email*" required).index-form__input
+                input(placeholder="Контактный телефон*" required).index-form__input
+                input(placeholder="Тема запроса").index-form__input
+              .index-form__row
+                textarea(placeholder="Какой вид нефтепродукта или нефтехимии Вас интересует, в каких объемах?").index-form__textarea
+              .index-form__row.form__row
+                label.checkbox
+                  input(type='checkbox').checkbox__input
+                  span.checkbox__text
+                    | Подтверждаю согласие с
+                    =" "
+                    a(href="#") политикой обработки персональных данных
+              .index-form__row
+                .btn.btn-lg
+                  input(type="submit" value="отправить")
+      // end index-form-section
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0b1a14d9-1e25-4bb0-8a04-e7591a268b9b')
+    script.
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [59.935634, 30.321627],
+            zoom: 16
+          }, {
+            searchControlProvider: 'yandex#search'
+          }),
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Компания ООО «ИНТЭК-Брокер»',
+            balloonContent: 'Офис в Санкт-Петербурге'
+          }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'assets/img/point.png',
+            // Размеры метки.
+            iconImageSize: [40, 53],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+          });
+        myMap.behaviors.disable('scrollZoom');
+        myMap.geoObjects
+          .add(myPlacemark);
+      });
