@@ -14,8 +14,9 @@ $(document).ready(function ($) {
     'services',
     'documents',
     'clients-partners',
-    'vacancies'
-    ]);
+    'vacancies',
+    'contacts'
+  ]);
 });
 
 function pageWidget(pages) {
