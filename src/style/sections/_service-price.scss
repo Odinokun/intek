@@ -1,0 +1,94 @@
+.service-price {
+  margin-top: -315px;
+  margin-bottom: 80px;
+
+  @include max(1020) {
+    margin-bottom: 0;
+  }
+}
+
+.service-price__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 73px;
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.service-price__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-price__item {
+  display: flex;
+  flex-direction: column;
+  width: 31.5%;
+  margin-bottom: 30px;
+  padding: 40px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+
+  @include max(1020) {
+    width: 48%;
+    &:last-child {
+      width: 100%;
+    }
+  }
+  @include max(670) {
+    width: 100%;
+  }
+  .btn {
+    margin-top: auto;
+    a,
+    button,
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.service-price__tarif {
+  font-family: $font-extrabold;
+  font-size: 50px;
+  margin-bottom: 37px;
+  color: $text;
+
+  @include max(1170) {
+    font-size: 40px;
+  }
+}
+
+.service-price__ul {
+  margin-bottom: 35px;
+  li {
+    padding-left: 15px;
+  }
+}
+
+.service-price__footer {
+  display: flex;
+  align-items: center;
+}
+
+.service-price__download {
+  font-family: $font-black;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 13px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}

@@ -17,7 +17,8 @@ $(document).ready(function ($) {
     'vacancies',
     'contacts',
     'reviews',
-    'company'
+    'company',
+    'service'
   ]);
 });
 
