@@ -1,0 +1,91 @@
+.boss-sec {
+  margin-bottom: -430px;
+  padding-top: 110px;
+  padding-bottom: 500px;
+  background-image: url('../img/bg-main-boss-sec.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    max-width: 242px;
+    height: 262px;
+    background-image: url('../img/bg-boss-sec.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: -80px;
+    right: 70px;
+  }
+
+  @include max(1020) {
+    margin-bottom: -500px;
+    padding-top: 30px;
+  }
+  .container {
+    display: flex;
+
+    @include max(1020) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.boss-sec__item--text {
+  width: 50%;
+  margin-right: auto;
+
+  @include max(1020) {
+    order: 10;
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+
+.boss-sec__item--ava {
+  flex: none;
+  width: 240px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.boss-sec__item--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: none;
+  width: 240px;
+  padding-left: 30px;
+
+  @include max(530) {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 0;
+  }
+}
+
+.boss-sec__name {
+  font-family: $font-semibold;
+  font-size: 20px;
+  position: relative;
+  margin-bottom: 65px;
+  &::before {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    content: '';
+    background-color: $highlight;
+  }
+}
+
+.boss-sec__position {
+  font-size: 15px;
+  display: block;
+}
