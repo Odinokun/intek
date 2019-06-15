@@ -1,0 +1,49 @@
+.company-activity {
+  position: relative;
+  background-color: #fff;
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    max-width: 800px;
+    content: '';
+    background-image: url('../img/bg-company-activity.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @include max(1330) {
+      opacity: .6;
+    }
+  }
+  .container {
+    display: flex;
+  }
+}
+
+.company-activity__item {
+  max-width: 690px;
+  margin-left: auto;
+  padding-top: 140px;
+  padding-bottom: 130px;
+
+  @include max(1330) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+
+.company-activity__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 70px;
+
+  @include max(1020) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}

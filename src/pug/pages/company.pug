@@ -22,9 +22,18 @@ block content
             a.breadcrumbs__link(href="#") О компании
       //end breadcrumbs
 
-      .container
-        h1.company__title О компании
-        p Компания ООО «ИНТЭК-Брокер» создана в 2015 году профессионалами с успешным опытом в финансовой, биржевой и нефтегазовой отраслях. Сегодня компания является надежным брокером, предоставляющим услуги на биржевом и внебиржевом российском рынке нефтепродуктов. 
+      // begin company-top section
+      .company-top
+        .company-top__pic
+          img(src="assets/img/company-top.jpg" alt="slide")
+        .container
+          .company-top__capture
+            h2.company-top__title О компании
+            p Компания ООО «ИНТЭК-Брокер» создана в 2015 году профессионалами с успешным опытом в финансовой, биржевой и нефтегазовой отраслях. Сегодня компания является надежным брокером, предоставляющим услуги на биржевом и внебиржевом российском рынке нефтепродуктов. 
+      // end company-top section
+
+      include ../sections/why-we
+      include ../sections/company-activity
 
 
     //end content
