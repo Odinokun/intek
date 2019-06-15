@@ -6,6 +6,20 @@
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: cover;
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    max-width: 242px;
+    height: 262px;
+    background-image: url('../img/bg-boss-sec.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: -80px;
+    right: 70px;
+  }
 
   @include max(1020) {
     margin-bottom: -500px;
