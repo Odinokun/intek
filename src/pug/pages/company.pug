@@ -1,0 +1,33 @@
+extends ../_template
+
+block variables
+  - var title           = 'О компании | Интек Брокер'
+  - var pageHeaderTitle = 'О компании | Интек Брокер'
+  - var description     = 'О компании | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.company
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") О компании
+      //end breadcrumbs
+
+      .container
+        h1.company__title О компании
+        p Компания ООО «ИНТЭК-Брокер» создана в 2015 году профессионалами с успешным опытом в финансовой, биржевой и нефтегазовой отраслях. Сегодня компания является надежным брокером, предоставляющим услуги на биржевом и внебиржевом российском рынке нефтепродуктов. 
+
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

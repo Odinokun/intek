@@ -16,7 +16,8 @@ $(document).ready(function ($) {
     'clients-partners',
     'vacancies',
     'contacts',
-    'reviews'
+    'reviews',
+    'company'
   ]);
 });
 
