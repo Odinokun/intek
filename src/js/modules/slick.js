@@ -165,4 +165,29 @@ module.exports = function () {
   });
   // end reviews-slider
 
+
+  // begin service-tarif__slider
+  // отображаем общее кол-во слайдов
+  $('#service-tarif__slider').on('init', function (event, slick) {
+    var allSlide = slick.slideCount;
+    $("#service-tarif__slider-counter--all").html(allSlide);
+  });
+  // отображаем текущий слайд в счетчике
+  $('#service-tarif__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    var curSlide = currentSlide + 1;
+    $("#service-tarif__slider-counter--current").html(curSlide);
+  });
+  // инициализируем слайдер
+  $('#service-tarif__slider').slick({
+    arrows: false,
+    infinite: false,
+    fade: true,
+    autoplay: false,
+    cssEase: 'linear',
+    dots: false
+  });
+  $(".btn").on('click', function () {
+    $("#service-tarif__slider").slick('slickNext');
+  });
+  // end service-tarif__slider
 };

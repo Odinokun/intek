@@ -267,6 +267,17 @@ svg {
   }
 }
 
+.btn-dark {
+  background-image: linear-gradient(to right, #1e1e1e 0%, #323232 100%);
+  &:hover {
+    a,
+    button,
+    input {
+      background-color: #0f0f0f;
+    }
+  }
+}
+
 .btn-lg {
   a,
   button,

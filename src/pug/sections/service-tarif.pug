@@ -1,0 +1,35 @@
+mixin service-tarif__slide(numb)
+  .service-tarif__slide
+    span.service-tarif__slide-text Имеете ли вы опыт работы на бирже?
+    span.service-tarif__slide-text #{numb}
+    span.service-tarif__slide-text А может быть даже и в три наверное
+    .service-tarif__slide-row
+      .btn.service-tarif__slide-btn
+        button да
+      .btn.btn-dark.service-tarif__slide-btn
+        button нет
+
+// begin service-tarif
+.service-tarif
+  .container
+    .service-tarif__item.service-tarif__item--left
+      h2.service-tarif__title Как выбрать тариф на брокерское обслуживание?
+      p.service-tarif__text Пройдите короткий тест и узнайте, какой тариф вам подойдет
+
+    .service-tarif__item.service-tarif__item--right
+      // begin service-tarif__slider
+      .service-tarif__slider#service-tarif__slider
+        +service-tarif__slide('Вопрос в две строки 01')
+        +service-tarif__slide('Вопрос в две строки 02')
+        +service-tarif__slide('Вопрос в две строки 03')
+        +service-tarif__slide('Вопрос в две строки 04')
+        +service-tarif__slide('Вопрос в две строки 05')
+        +service-tarif__slide('Вопрос в две строки 06')
+        +service-tarif__slide('Вопрос в две строки 07')
+        +service-tarif__slide('Вопрос в две строки 08')
+      .service-tarif__slider-counter
+        span.service-tarif__slider-counter--current#service-tarif__slider-counter--current 1
+        span.service-tarif__slider-counter--all#service-tarif__slider-counter--all
+      // end service-tarif__slider
+
+// end service-tarif
