@@ -116,4 +116,16 @@ module.exports = function () {
   });
   // end reviews-slider
 
+  // begin reviews-slider
+  $('#service-top__slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    cssEase: 'linear'
+  });
+  // end reviews-slider
+
 };

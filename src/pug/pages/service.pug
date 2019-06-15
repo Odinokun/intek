@@ -1,0 +1,34 @@
+extends ../_template
+
+block variables
+  - var title           = 'Брокерское обслуживание | Интек Брокер'
+  - var pageHeaderTitle = 'Брокерское обслуживание | Интек Брокер'
+  - var description     = 'Брокерское обслуживание | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.service
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Услуги компании
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Брокерское обслуживание
+      //end breadcrumbs
+
+      include ../sections/service-top
+      include ../sections/index-form
+
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
