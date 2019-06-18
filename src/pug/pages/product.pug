@@ -1,0 +1,264 @@
+extends ../_template
+
+mixin product-tab__body-row
+  .product-tab__body-row
+    .product-tab__body-row-inn
+      .product-tab__body-item
+        span Приказ о назначении Директора Общества
+      .product-tab__body-item.product-tab__body-item--download
+        +svg('download')
+        span скачать
+
+block variables
+  - var title           = 'Продукция | Интек Брокер'
+  - var pageHeaderTitle = 'Продукция | Интек Брокер'
+  - var description     = 'Продукция | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.production
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Продукция
+      //end breadcrumbs
+
+      .container
+        h1.news-page__title Продукция
+        //begin product-item 01
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-01.jpg" alt="product")
+            h3.product-item__pic-title
+              | Битум
+              br
+              | и битумные
+              br
+              | материалы
+          p ООО «ИНТЭК-БРОКЕР» - дистрибьютор ООО «Газпромнефть-БМ» в России. За время работы ООО «ИНТЭК-БРОКЕР» зарекомендовал себя как надежный партнер по поставке и реализации дорожных битумов. Постоянное расширение географии поставок дорожных битумов свидетельствует о надежности и стабильности ООО «ИНТЭК-БРОКЕР». Еще одна наша сильная сторона — логистика. Кроме традиционных схем поставок по железной дороге, мы производим доставку битума автомобильным транспортом. ООО «ИНТЭК-БРОКЕР» имеет надежные договорные отношения с несколькими перевозчиками темных нефтепродуктов. Все автомобили-битумовозы наших партнеров емкостью 30 куб. м. оснащены системой спутниковой навигации, что позволяет контролировать все параметры машин и вести мониторинг маршрута их движения.
+          .btn.btn-lg
+            a(href="#") подробнее
+        //end   product-item 01
+
+        //begin product-item 02
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-02.jpg" alt="product")
+            h3.product-item__pic-title Дизельное топливо
+          ol
+            li
+              |Поставки дизельного топлива от ведущих производителей железно-дорожными вагоно-цистернами на станцию назначения Клиента или нефтебазу Клиента.
+              br
+              |Объем поставки от 60 тонн.
+              br
+              |Поставки дизельного топлива от ведущих производителей трубопроводным транспортом по системе МНПП ПАО «Транснефть» до ЛПДС (НС) Клиента.
+            li Минимальный объем поставки 100 тонн. Возможен самовывоз с наших нефтебаз в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li дизельное топливо ЕВРО сорта C-F и классов 0-4, соответствующее ГОСТ 52368-2005 (EH590:2009);
+            li дизельное топливо, соответствующее ТР ТС013/2011;
+            li топливо дизельное, ЕВРО, летнее, зимнее и межсезонное, экологического класса K4 и К5, качество которых соответствует ГОСТ 32511-2013 (EN590:2009);
+            li дизельное топливо зимнее минус 32 и арктическое минус 44, соответствующие ГОСТ Р55475-2013.
+
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 02
+
+        //begin product-item 03
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-03.jpg" alt="product")
+            h3.product-item__pic-title Бензин
+          p
+            |Поставки бензинов от ведущих производителей железно-дорожными вагоно-цистернами на станцию назначения Клиента или нефтебазу Клиента.
+            br
+            |Объем поставки от 60 тонн. Возможен самовывоз с наших нефтебаз в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li бензин Супер ЕВРО-98 и Премиум ЕВРО-95, 4 и 5 экологического класса, соответствующий ГОСТ Р 51866-2002;
+            li бензин 95, 4 и 5 экологического класса, соответствующий ТУ 38.401-58-171-96;
+            li бензин Регуляр-92 и Нормаль-80, 4 и 5 экологического класса, ГОСТР 51105-97;
+            li бензин 92, 4 и 5 экологического класса, ТУ 38.401-58-171-96;
+            li бензин неэтилированный марки АИ-98, 95, 92 и 80, 4 и 5 классов, соответствующих ГОСТ 32513-2013.
+
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 03
+
+        //begin product-item 04
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-04.jpg" alt="product")
+            h3.product-item__pic-title
+              | Сжиженные
+              br
+              | углеводороды
+              br
+              | (СУГ)
+          p Поставки сжиженных углеводородов марок ПБТ, СПБТ, ПБА железнодорожными газоцистернами по России. Минимальный объем поставки — 25 тонн. При поставке на условиях «франко-вагон станция отправления», в зависимости от базиса поставки, минимальные объемы могут составлять 25, 31, 32, 35, 36, 40 или 150 тонн. При поставке на условиях «самовывоз своим железнодорожным транспортом» на определенных базисах поставки, минимальные объемы могут составлять 60, 350 или 1015 тонн. Возможен самовывоз своими газовозами с наших газотерминалов в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li газы углеводородные сжиженные топливные для коммунально-бытового потребления, марки СПБТ, ГОСТ 20448-90;
+            li газы углеводородные сжиженные топливные, марки ПБТ, ГОСТ Р 52087-2003;
+            li газы углеводородные сжиженные для автомобильного транспорта, марки ПБА, ГОСТ 27578-87.
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 04
+
+        //begin product-item 05
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-05.jpg" alt="product")
+            h3.product-item__pic-title
+              | Топливо
+              br
+              | для реактивных
+              br
+              | двигателей
+          ol
+            li Поставки топлива для реактивных двигателей марок РТ и ТС-1, керосина технического марки КТ-1 железно-дорожными вагоно-цистернами на станцию назначения Клиента или нефтебазу Клиента. Объем поставки от 60ти тонн.
+            li Поставки топлива для реактивных двигателей марки ТС-1 от ведущих производителей трубопроводным транспортом по системе МНПП ПАО «Транснефть» до ЛПДС (НС) Клиента. Минимальный объем поставки 100 тонн.
+            li Возможен самовывоз с наших нефтебаз в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li топливо для реактивных двигателей ТС-1, высший сорт, ГОСТ 10227-86;
+            li топливо для реактивных двигателей РТ, высший сорт, ГОСТ 10227-86;
+            li топливо для реактивных двигателей марок РТ в/с, ТС-1 в/с, ГОСТ 10227-86;
+            li керосин для технических целей марки КТ-1, СТО 11605031-010-2007.
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 05
+
+        //begin product-item 06
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-06.jpg" alt="product")
+            h3.product-item__pic-title
+              | Газовый
+              br
+              | конденсат
+              br
+              | стабильный
+          p
+            |Поставки конденсата газового железно-дорожными вагоно-цистернами на станцию назначения Клиента или нефтебазу Клиента. Объем поставки от 25 до 50 тонн.
+            br
+            |Возможен самовывоз с наших нефтебаз в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li конденсат газовый стабильный, ТУ 38.401-58-424-2015. (ГУП «Черноморнефтегаз»);
+            li конденсат газовый стабильный, ТУ 0271-001-91165706-2012. (ст. Фарафоньтьевская);
+            li конденсат газовый стабильный, СТО 001-2008. (ст. Коротчаево);
+            li нефтегазоконденсатная смесь СТО ДИАЛЛ АЛЬЯНС 001-2012. (УКПГ «Карпенское»).
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 06
+
+        //begin product-item 07
+        .product-item
+          .product-item__pic
+            img(src="assets/img/product/product-07.jpg" alt="product")
+            h3.product-item__pic-title Темные нефтепродукты
+          p Поставки темных нефтепродуктов железно-дорожными вагоно-цистернами на станцию назначения Клиента или нефтебазу Клиента. Минималный объем поставки от 65 до 195 тонн, в зависимости от базиса поставки. Возможна поставка битума в фасованном виде и масел в бочках. Возможен самовывоз с наших нефтебаз в регионе присутствия Компании.
+          h3.product-item__subtitle Биржевой товар, допускаемый к торгам:
+          ul
+            li мазут топочный 100, ГОСТ 10585-2013.
+            li мазут топочный М 100 0,5%, малозольный, 25° С, ГОСТ 10585-2013
+            li мазут топочный 100 1,00%, 1,5%, 2,5%, 3,0%, 3.5%, малозольный, 25° С, ГОСТ 10585-2013
+            li мазут топочный 40, ГОСТ 10585-2013.
+            li мазут топочный TKM-16 ТУ 38.401-58-74-2005.
+            li битум нефтяной дорожный вязкий марки БНД 50/70, ГОСТ Р 33133-2014.
+            li битум нефтяной дорожный вязкий БНД 60/90, ГОСТ 22245-90.
+            li битум нефтяной дорожный вязкий БНД 90/130 (поставка в фасованном виде), ГОСТ 22245-90.
+            li масла базовые, моторные, трансмиссионные, гидравлические, индустриальные, для дизельных двигателей, компрессорные.
+          // begin product-tab
+          .product-tab
+            .product-tab__item
+              .product-tab__header
+                .product-tab__header-inn
+                  span.tab-btn
+                  h3.product-tab__title Документы на продукцию
+              .product-tab__body
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+                +product-tab__body-row
+          // end product-tab
+        //end   product-item 07
+
+        .btn.production-btn
+          button оформить запрос
+
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

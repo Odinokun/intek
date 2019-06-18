@@ -28,4 +28,18 @@ module.exports = function () {
   });
   // end vacancies-tab
 
+  // begin product-tab
+  $('.product-tab__header').on('click', function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).siblings('.product-tab__body').slideUp();
+    } else {
+      $('.product-tab__header').removeClass('active');
+      $('.product-tab__body').slideUp();
+      $(this).addClass('active');
+      $(this).siblings('.product-tab__body').slideDown();
+    }
+  });
+  // end product-tab
+
 };
