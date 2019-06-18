@@ -19,7 +19,8 @@ $(document).ready(function ($) {
     'reviews',
     'company',
     'service',
-    'product'
+    'product',
+    'bitum'
   ]);
 });
 
