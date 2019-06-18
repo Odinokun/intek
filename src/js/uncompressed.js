@@ -18,7 +18,8 @@ $(document).ready(function ($) {
     'contacts',
     'reviews',
     'company',
-    'service'
+    'service',
+    'product'
   ]);
 });
 
