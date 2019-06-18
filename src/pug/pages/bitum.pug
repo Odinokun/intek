@@ -1,0 +1,129 @@
+extends ../_template
+
+mixin bitum-materials__item(pic, title, text)
+  .bitum-materials__item
+    .bitum-materials__pic
+      img(src="assets/img/bitum/bitum-" + pic + ".jpg" alt="picture")
+    .bitum-materials__body
+      h3.bitum-materials__title #{title}
+      p #{text}
+
+mixin bitum-factories__item(numb, title, text)
+  .bitum-factories__item
+    span.bitum-factories__item-numb #{numb}
+    h3.bitum-factories__item-title #{title}
+    p #{text}
+
+mixin bitum-bottom-tab__body-row
+  .bitum-bottom-tab__body-row
+    .bitum-bottom-tab__body-row-inn
+      .bitum-bottom-tab__body-item
+        span Приказ о назначении Директора Общества
+      a(href="#").bitum-bottom-tab__body-item.bitum-bottom-tab__body-item--download
+        +svg('download')
+        span скачать
+
+block variables
+  - var title           = 'Битум и битумные материалы | Интек Брокер'
+  - var pageHeaderTitle = 'Битум и битумные материалы | Интек Брокер'
+  - var description     = 'Битум и битумные материалы | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.bitum
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Продукция
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Битум и битумные материалы
+      //end breadcrumbs
+
+      .container
+        h1.news-page__title Битум и битумные материалы
+
+        //begin bitum-materials
+        .bitum-materials
+          // begin bitum-materials__item 01
+          +bitum-materials__item('01', 'Дорожные битумы', 'Битумы нефтяные дорожные применяют для строительства и ремонта дорожных и аэродромных покрытий.')
+          // end bitum-materials__item 01
+          // begin bitum-materials__item 02
+          +bitum-materials__item('02', 'Битумные эмульсии, мастики', 'Используются для дорожных работ, гидроизоляции конструкций, для поверхностной обработки асфальта при строительных работах.')
+          // end bitum-materials__item 02
+          // begin bitum-materials__item 03
+          +bitum-materials__item('03', 'Полимерно-битумные вяжущие', 'ПБВ отличается повышенной сопротивляемостью к деформациям и старению, улучшенными свойствами при высоких и низких температурах. Применяются в дорожном и аэродромном строительстве.')
+          // end bitum-materials__item 03
+          // begin bitum-materials__item 04
+          +bitum-materials__item('04', 'Строительный и кровельный битум', 'Универсальные материал, широко используемые в различных областях строительства для гидроизоляции строительных и инженерных конструкций и сооружений из различных материалов.')
+          // end bitum-materials__item 04
+          // begin bitum-materials__item 05
+          +bitum-materials__item('05', 'Битумопроизводные', 'Высокотехнологичные битумопроизводные материалы, широко востребованные в сфере строительства, ремонта и содержания автодорог, аэродромов, прочих объектов транспортной инфраструктуры.')
+          // end bitum-materials__item 05
+          // begin bitum-materials__item 06
+          +bitum-materials__item('06', 'Кокс', 'Используется для изготовления электродов с низким электрическим сопротивлением и коэффициентом термического расширения. Он применяется в металлургической, а также атомной, химической и космической промышленности.')
+          // end bitum-materials__item 06
+          // begin bitum-materials__item 07
+          +bitum-materials__item('03', 'ПМБ G-WAY STYRELF', 'Полимерно-модифицированный битум увеличивает срок эксплуатации дорог более чем в 2 раза.')
+          // end bitum-materials__item 07
+
+
+        //end bitum-materials
+
+        //begin bitum-descriptions
+        .bitum-descriptions
+          p
+            strong ООО «ИНТЭК-БРОКЕР» - дистрибьютор ООО «Газпромнефть-БМ» в России. За время работы ООО «ИНТЭК-БРОКЕР» зарекомендовал себя как надежный партнер по поставке и реализации дорожных битумов. Постоянное расширение географии поставок дорожных битумов свидетельствует о надежности и стабильности ООО «ИНТЭК-БРОКЕР».
+          .bitum-descriptions__svg-block
+            +svg('car')
+            p Еще одна наша сильная сторона — логистика. Кроме традиционных схем поставок по железной дороге, мы производим доставку битума автомобильным транспортом. ООО «ИНТЭК-БРОКЕР» имеет надежные договорные отношения с несколькими перевозчиками темных нефтепродуктов. Все автомобили-битумовозы наших партнеров емкостью 30 куб. м. оснащены системой спутниковой навигации, что позволяет контролировать все параметры машин и вести мониторинг маршрута их движения.
+        //end bitum-descriptions
+
+        //begin bitum-factories
+        .bitum-factories
+          h3.bitum-factories__title Отгрузка битумных материалов осуществляется со следующих НПЗ:
+          .bitum-factories__list
+            +bitum-factories__item('01', 'АО "Газпромнефть-Московский НПЗ"','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('02', 'АО "Славнефть-Ярославнефтеоргсинтез"','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('03', 'АО «Газпромнефть-Омский НПЗ»','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('04', 'Рязанский завод битумных материалов (РЗБМ)','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('05', '«Газпромнефть-Тоталь ПМБ»','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('06', 'ТОО «Газпромнефть – Битум Казахстан», г. Шымкент','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+            +bitum-factories__item('07', 'Битумный терминал в г. Сальске (Ростовская область)','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,')
+        //end bitum-factories
+
+        //begin bitum-bottom
+        .bitum-bottom
+          .btn.btn__bitum-bottom
+            button скачать каталог продукции
+
+          // begin bitum-bottom-tab
+          .bitum-bottom-tab
+            .bitum-bottom-tab__item
+              .bitum-bottom-tab__header
+                .bitum-bottom-tab__header-inn
+                  span.tab-btn
+                  h3.bitum-bottom-tab__title Документы на продукцию
+              .bitum-bottom-tab__body
+                +bitum-bottom-tab__body-row
+                +bitum-bottom-tab__body-row
+                +bitum-bottom-tab__body-row
+                +bitum-bottom-tab__body-row
+          // end bitum-bottom-tab
+        //end bitum-bottom
+
+
+
+        //end bitum-factories
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup

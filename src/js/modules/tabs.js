@@ -42,4 +42,18 @@ module.exports = function () {
   });
   // end product-tab
 
+  // begin bitum-bottom-tab
+  $('.bitum-bottom-tab__header').on('click', function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).siblings('.bitum-bottom-tab__body').slideUp();
+    } else {
+      $('.bitum-bottom-tab__header').removeClass('active');
+      $('.bitum-bottom-tab__body').slideUp();
+      $(this).addClass('active');
+      $(this).siblings('.bitum-bottom-tab__body').slideDown();
+    }
+  });
+  // end bitum-bottom-tab
+
 };

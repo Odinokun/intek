@@ -1,0 +1,345 @@
+.bitum {
+  padding-top: 240px;
+  background-image: url('../img/bg-bitum-01.jpg'),
+  url('../img/bg-bitum-02.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 77% 0, 0 200px;
+
+  @include max(1024) {
+    padding-top: 150px;
+  }
+
+  .main {
+    padding-bottom: 80px;
+  }
+}
+
+.news-page__title {
+  font-family: $font-medium;
+  font-size: 40px;
+  margin-bottom: 70px;
+
+  @include max(670) {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+}
+
+//begin bitum-materials
+.bitum-materials {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  background-image: url('../img/bg-bitum-03.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 65%;
+
+  @include max(900) {
+    justify-content: space-between;
+  }
+}
+
+.bitum-materials__item {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  background-color: #fff;
+
+  @include max(1170) {
+    width: 33.33%;
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+    &:nth-child(4n) {
+      padding-right: 30px;
+    }
+  }
+  @include max(900) {
+    width: 47.5%;
+    padding: 0 !important;
+  }
+  @include max(600) {
+    width: 100%;
+  }
+  &:nth-child(4n) {
+    padding-right: 0;
+  }
+}
+
+.bitum-materials__pic {
+  overflow: hidden;
+  width: 100%;
+  max-height: 150px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bitum-materials__body {
+  flex-grow: 1;
+  padding: 30px 20px 30px 30px;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.bitum-materials__title {
+  font-family: $font-extrabold;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+//end bitum-materials
+//begin bitum-descriptions
+.bitum-descriptions {
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.bitum-descriptions__svg-block {
+  display: flex;
+
+  @include max(500) {
+    display: block;
+  }
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 51px;
+    height: 34px;
+    margin-right: 30px;
+
+    @include max(500) {
+      float: left;
+      margin-top: 10px;
+    }
+  }
+}
+
+//end bitum-descriptions
+
+//begin bitum-factories
+.bitum-factories {
+  padding-top: 40px;
+}
+
+.bitum-factories__title {
+  font-family: $font-extrabold;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.bitum-factories__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  @include max(760) {
+    justify-content: space-between;
+  }
+}
+
+.bitum-factories__item {
+  width: 25%;
+  padding-top: 20px;
+  padding-right: 30px;
+
+  @include max(1020) {
+    width: 33.33%;
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+    &:nth-child(4n) {
+      padding-right: 30px;
+    }
+  }
+  @include max(760) {
+    width: 48%;
+    padding-right: 0 !important;
+  }
+  @include max(500) {
+    width: 100%;
+  }
+
+  &:nth-child(4n) {
+    padding-right: 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.bitum-factories__item-numb {
+  font-family: $font-extrabold;
+  font-size: 70px;
+  display: block;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  color: $highlight;
+  background-image: url('../img/service-deal-number.jpg');
+  background-repeat: no-repeat;
+  background-position: 70px 0;
+}
+
+.bitum-factories__item-title {
+  font-family: $font-semibold;
+  font-size: 17px;
+}
+
+//end bitum-factories
+
+// begin bitum-bottom-tab
+.bitum-bottom {
+  padding-top: 50px;
+}
+
+.btn__bitum-bottom {
+  margin-bottom: 20px;
+  a,
+  button,
+  input {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+//end bitum-bottom
+
+//begin bitum-bottom-tab
+.bitum-bottom-tab {
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto 50px;
+}
+
+.bitum-bottom-tab__item {
+  overflow: hidden;
+}
+
+.bitum-bottom-tab__header {
+  cursor: pointer;
+  &.active {
+    .tab-btn {
+      transform: rotate(360deg);
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.bitum-bottom-tab__header-inn {
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 24px 0 20px 0;
+}
+
+.tab-btn {
+  position: relative;
+  display: flex;
+  flex: none;
+  width: 27px;
+  height: 27px;
+  margin-right: 22px;
+  transition: transform .5s;
+  border: 3px solid $highlight;
+  border-radius: 50%;
+
+  @include max(530) {
+    margin-right: 10px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 11px;
+    height: 3px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 1;
+    background-color: $highlight;
+  }
+  &::before {
+    top: 9px;
+    left: 5px;
+  }
+  &::after {
+    top: 9px;
+    left: 5px;
+    transform: rotate(90deg);
+  }
+}
+
+.bitum-bottom-tab__title {
+  font-family: $font-extrabold;
+  font-size: 18px;
+  transition: color .5s;
+  color: $highlight;
+}
+
+.bitum-bottom-tab__body {
+  display: none;
+  margin-bottom: 30px;
+}
+
+.bitum-bottom-tab__body-row {
+  border-top: 1px solid #fff;
+  background-color: #f0f0f0;
+}
+
+.bitum-bottom-tab__body-row-inn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 50px;
+
+  @include max(500) {
+    padding-left: 15px;
+  }
+}
+
+.bitum-bottom-tab__body-item {
+  font-size: 17px;
+  padding: 17px 50px 18px 0;
+
+  @include max(500) {
+    padding: 17px 15px 18px 0;
+  }
+  span {
+    font-size: 15px;
+  }
+}
+
+.bitum-bottom-tab__body-item--download {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  svg {
+    fill: $highlight;
+    width: 13px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  span {
+    font-family: $font-black;
+    font-size: 15px;
+    color: $highlight;
+  }
+}
+
+//end bitum-bottom-tab

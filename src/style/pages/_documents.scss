@@ -39,9 +39,11 @@
   @include max(1650) {
     width: 50%;
   }
+
   @include max(1440) {
     width: 40%;
   }
+
   @include max(1200) {
     width: auto;
   }
@@ -79,6 +81,7 @@
     max-width: 700px;
     transform: translate(-110px, 0%);
   }
+
   @include max(760) {
     overflow: visible;
     width: 100%;
@@ -92,6 +95,7 @@
     @include max(760) {
       overflow: hidden;
     }
+
     @include max(576) {
       width: 240px !important;
     }
@@ -238,6 +242,7 @@
   @include max(530) {
     margin-right: 10px;
   }
+
   &::before,
   &::after {
     position: absolute;
@@ -299,6 +304,7 @@
 .documents-tab__body-item--download {
   display: flex;
   align-items: center;
+  text-decoration: none;
   svg {
     fill: $highlight;
     width: 13px;

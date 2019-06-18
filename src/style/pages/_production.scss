@@ -7,6 +7,7 @@
   @include max(1024) {
     padding-top: 150px;
   }
+
   .main {
     padding-bottom: 180px;
 
@@ -188,6 +189,7 @@
   @include max(500) {
     padding: 17px 15px 18px 0;
   }
+
   span {
     font-size: 15px;
   }
@@ -196,6 +198,7 @@
 .product-tab__body-item--download {
   display: flex;
   align-items: center;
+  text-decoration: none;
   svg {
     fill: $highlight;
     width: 13px;
