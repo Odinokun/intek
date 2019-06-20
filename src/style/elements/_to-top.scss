@@ -1,0 +1,22 @@
+.to-top{
+  background-color: $highlight;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  display: none;
+  svg{
+    height: 35px;
+    width: 17px;
+    fill:#fff;
+  }
+}
+.to-top__inn{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 70px;
+  height: 70px;
+}

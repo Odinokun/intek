@@ -14,7 +14,7 @@
   }
 }
 
-.news-page__title {
+.bitum__title {
   font-family: $font-medium;
   font-size: 40px;
   margin-bottom: 70px;
@@ -57,13 +57,16 @@
       padding-right: 30px;
     }
   }
+
   @include max(900) {
     width: 47.5%;
     padding: 0 !important;
   }
+
   @include max(600) {
     width: 100%;
   }
+
   &:nth-child(4n) {
     padding-right: 0;
   }
@@ -105,23 +108,23 @@
   padding-top: 30px;
 }
 
-.bitum-descriptions__svg-block {
+.bitum-descriptions__row {
   display: flex;
 
   @include max(500) {
     display: block;
   }
-  svg {
-    flex: none;
-    fill: $highlight;
-    width: 51px;
-    height: 34px;
-    margin-right: 30px;
+}
 
-    @include max(500) {
-      float: left;
-      margin-top: 10px;
-    }
+.bitum-descriptions_icon {
+  flex: none;
+  width: 51px;
+  height: 34px;
+  margin-right: 30px;
+
+  @include max(500) {
+    float: left;
+    margin-top: 10px;
   }
 }
 
@@ -163,10 +166,12 @@
       padding-right: 30px;
     }
   }
+
   @include max(760) {
     width: 48%;
     padding-right: 0 !important;
   }
+
   @include max(500) {
     width: 100%;
   }
@@ -320,6 +325,7 @@
   @include max(500) {
     padding: 17px 15px 18px 0;
   }
+
   span {
     font-size: 15px;
   }

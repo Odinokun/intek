@@ -18,4 +18,7 @@ $(function() {
   // begin tabs
   require('./modules/tabs')();
 
+  // begin to-top
+  require('./modules/to-top')();
+
 });
