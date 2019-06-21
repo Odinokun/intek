@@ -11,6 +11,8 @@
     max-width: 771px;
     height: 211px;
     content: '';
+    transition: transform 1s .2s;
+    transform: translateX(1000px);
     background-image: url('../img/car.png');
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -20,10 +22,16 @@
       bottom: 200px;
       max-width: 500px;
     }
+
     @include max(500) {
       display: none;
     }
   }
+    &.active {
+      &::before {
+        transform: translateX(0);
+      }
+    }
 }
 
 .index-form-section__inn {
@@ -39,6 +47,7 @@
   @include max(1330) {
     padding-top: 50px;
   }
+
   @include max(500) {
     padding-bottom: 50px;
     border-width: 10px;
@@ -71,6 +80,7 @@
   @include max(900) {
     width: 48%;
   }
+
   @include max(500) {
     width: 100%;
   }
