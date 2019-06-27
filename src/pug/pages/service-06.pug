@@ -1,0 +1,52 @@
+extends ../_template
+
+mixin service-top__slide(pic)
+  .service-top__slide(style="background-image:url('assets/img/service-top__slider/slide-" + pic + ".jpg')")
+    .container
+      .service-top__capture
+        h2.service-top__title Брокерское обслуживание на товарных биржах АО
+        p Компания «ИНТЭК-Брокер» является аккредитованным брокером и участником торгов на товарных биржах Российской Федерации и оказывает брокерские услуги на товарном рынке РФ, обслуживает клиентские биржевые операции на топливно-энергетическом рынке.
+
+
+block variables
+  - var title           = 'Брокерское обслуживание | Интек Брокер'
+  - var pageHeaderTitle = 'Брокерское обслуживание | Интек Брокер'
+  - var description     = 'Брокерское обслуживание | Интек Брокер'
+  - var ogtitle         = 'Интек Брокер'
+  - var ogimage         = 'assets/img/social.jpg'
+
+block content
+  .main-wrap.service
+    include ../sections/header
+
+    //begin content
+    .main
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Интек-Брокер
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Услуги компании
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Брокерское обслуживание
+      //end breadcrumbs
+
+      // begin service-top
+      .service-top
+        // begin service-top__slider
+        .service-top__slider
+          +service-top__slide('06')
+        // end service-top__slider
+      // end service-top
+
+      include ../sections/service-deal
+      include ../sections/service-tarif
+      include ../sections/service-price
+      include ../sections/index-form
+
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
