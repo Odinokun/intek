@@ -19,6 +19,12 @@ $(document).ready(function ($) {
     'reviews',
     'company',
     'service',
+    'service-01',
+    'service-02',
+    'service-03',
+    'service-04',
+    'service-05',
+    'service-06',
     'product',
     'bitum'
   ]);
