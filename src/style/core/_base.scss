@@ -23,6 +23,9 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
 }
 
 h1,

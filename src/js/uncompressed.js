@@ -49,7 +49,3 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
-$().fancybox({
-  // selector : '.slick-slide:not(.slick-cloned)',
-  hash     : false
-});

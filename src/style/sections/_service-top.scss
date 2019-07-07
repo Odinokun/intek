@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: contain;
+
     @include max(600) {
       display: none;
     }
@@ -20,7 +21,7 @@
 }
 
 .service-top__slide {
-  min-height: 900px;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: cover;
@@ -45,6 +46,7 @@
   @include max(1024) {
     padding-top: 250px;
   }
+
   p {
     color: #fff;
   }
