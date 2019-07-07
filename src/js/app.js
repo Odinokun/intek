@@ -22,6 +22,6 @@ $(function() {
   require('./modules/to-top')();
 
   // begin car
-  require('./modules/car')();
+  // require('./modules/car')();
 
 });
