@@ -6,6 +6,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -20,9 +21,16 @@ html {
 
 body {
   display: flex;
-  overflow-x: hidden;
   flex-direction: column;
   min-width: 320px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+.hidden,
+.main,
+.documents{
+  //overflow-x: hidden;
 }
 
 h1,
