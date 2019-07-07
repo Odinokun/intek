@@ -27,12 +27,24 @@ module.exports = function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     cssEase: 'linear',
     responsive: [
       {
-        breakpoint: 577,
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 841,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 601,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -48,12 +60,24 @@ module.exports = function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     cssEase: 'linear',
     responsive: [
       {
-        breakpoint: 577,
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 841,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 601,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
