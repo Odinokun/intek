@@ -5,8 +5,8 @@
   background-repeat: no-repeat, no-repeat;
   background-position: 77% 0, 0 200px;
 
-  @include max(1024) {
-    padding-top: 150px;
+  @include max(1200) {
+    padding-top: 120px;
   }
 
   .main {
@@ -18,6 +18,10 @@
   font-family: $font-medium;
   font-size: 40px;
   margin-bottom: 70px;
+
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
 
   @include max(670) {
     font-size: 34px;

@@ -24,4 +24,7 @@ $(function() {
   // begin car
   require('./modules/car')();
 
+  // begin addFile
+  require('./modules/addFile')();
+
 });

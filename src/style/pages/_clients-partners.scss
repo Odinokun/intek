@@ -4,15 +4,16 @@
   url('../img/bg-clients-partners-02.jpg');
   background-repeat: no-repeat;
   background-position: 0 30%, 70% 10%;
-  @include max(1024) {
-    padding-top: 150px;
+
+  @include max(1200) {
+    padding-top: 120px;
   }
+
   @include max(670) {
     background-image: url('../img/bg-clients-partners-02.jpg');
     background-repeat: no-repeat;
     background-position: 70% 10%;
   }
-
   .main {
     padding-bottom: 130px;
   }
@@ -20,6 +21,11 @@
 
 .clients-partners__title {
   margin-bottom: 65px;
+
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
+
   @include max(1020) {
     font-size: 32px;
     line-height: 40px;
@@ -29,6 +35,7 @@
 
 .clients-partners__top-container {
   margin-bottom: 50px;
+
   @include max(1020) {
     margin-bottom: 0;
   }

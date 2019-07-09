@@ -4,8 +4,8 @@
   background-repeat: no-repeat;
   background-position: 65% 0;
 
-  @include max(1024) {
-    padding-top: 150px;
+  @include max(1200) {
+    padding-top: 120px;
   }
 }
 

@@ -4,9 +4,10 @@
   background-repeat: no-repeat;
   background-position: 100% 26%;
 
-  @include max(1024) {
-    padding-top: 150px;
+  @include max(1200) {
+    padding-top: 120px;
   }
+
   .vacancies-form-section {
     padding-top: 80px;
   }
@@ -16,6 +17,10 @@
   font-family: $font-medium;
   font-size: 40px;
   margin-bottom: 60px;
+
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
 
   @include max(670) {
     font-size: 34px;
@@ -54,6 +59,7 @@
   @include max(1330) {
     padding-right: 50px;
   }
+
   @include max(670) {
     padding-right: 30px;
   }
@@ -71,9 +77,11 @@
     @include max(1560) {
       right: -50px;
     }
+
     @include max(1330) {
       right: 15px;
     }
+
     @include max(670) {
       right: -5px;
     }

@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 240px;
 
-  @include max(1024) {
+  @include max(1200) {
     padding-top: 150px;
   }
 }
@@ -30,6 +30,7 @@
   @include max(600) {
     max-width: 350px;
   }
+
   img {
     display: block;
     height: 100%;
@@ -63,6 +64,10 @@
   font-size: 40px;
   line-height: 55px;
   margin-bottom: 65px;
+
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
 
   @include max(1020) {
     font-size: 32px;

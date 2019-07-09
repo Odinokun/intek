@@ -32,6 +32,10 @@
     min-height: 0;
     padding-bottom: 60px;
   }
+
+  @include max(1200) {
+    padding-top: 200px;
+  }
 }
 
 .error__title {

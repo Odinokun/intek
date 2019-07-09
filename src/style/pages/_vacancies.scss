@@ -4,8 +4,8 @@
   background-repeat: no-repeat;
   background-position: 69% 0;
 
-  @include max(1024) {
-    padding-top: 150px;
+  @include max(1200) {
+    padding-top: 120px;
   }
 }
 
@@ -14,6 +14,9 @@
   font-size: 40px;
   margin-bottom: 63px;
 
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
   @include max(670) {
     font-size: 34px;
     line-height: 1.2;
@@ -179,6 +182,11 @@
   position: relative;
   overflow: hidden;
   padding: 110px 15px 150px 15px;
+  &.active {
+    &::before {
+      transform: translateX(0);
+    }
+  }
   &::before {
     position: absolute;
     z-index: 1;
@@ -188,6 +196,8 @@
     max-width: 771px;
     height: 211px;
     content: '';
+    transition: transform 1s .2s;
+    transform: translateX(1000px);
     background-image: url('../img/car.png');
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -197,7 +207,6 @@
       bottom: 200px;
       max-width: 500px;
     }
-
     @include max(500) {
       display: none;
     }
@@ -217,7 +226,6 @@
   @include max(1330) {
     padding-top: 50px;
   }
-
   @include max(500) {
     padding-bottom: 50px;
     border-width: 10px;
@@ -276,6 +284,7 @@
   @include max(900) {
     margin-bottom: 30px;
   }
+
   svg {
     position: relative;
     z-index: 1;

@@ -9,7 +9,7 @@ module.exports = function () {
   $(window).scroll(function () {
     var winScrollTop = $(this).scrollTop();
     if (winScrollTop > scrollToElem) {
-      $('.index-form-section').addClass('active');
+      $('.index-form-section, .vacancies-form-section').addClass('active');
     }
   });
   // end car
