@@ -2,11 +2,15 @@
   background-image: url('../img/bg-thankyou.jpg');
   background-repeat: no-repeat;
   background-position: 70% 0;
+  .main > .container{
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    min-height: 100vh;
+  }
 }
 
 .thankyou__capture {
-  padding-top: 330px;
-  padding-bottom: 240px;
 
   @include max(1200) {
     padding-top: 200px;

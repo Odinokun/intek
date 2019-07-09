@@ -1,12 +1,8 @@
 .production {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-production.jpg');
   background-repeat: no-repeat;
   background-position: 77% 0;
-
-  @include max(1200) {
-    padding-top: 120px;
-  }
 
   .main {
     padding-bottom: 180px;

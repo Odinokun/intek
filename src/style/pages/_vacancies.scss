@@ -1,22 +1,15 @@
 .vacancies {
-  padding-top: 243px;
+  padding-top: 120px;
   background-image: url('../img/bg-vacancies.jpg');
   background-repeat: no-repeat;
   background-position: 69% 0;
-
-  @include max(1200) {
-    padding-top: 120px;
-  }
 }
 
 .vacancies__title {
   font-family: $font-medium;
   font-size: 40px;
-  margin-bottom: 63px;
+  margin-bottom: 40px;
 
-  @include max(1200) {
-    margin-bottom: 40px;
-  }
   @include max(670) {
     font-size: 34px;
     line-height: 1.2;

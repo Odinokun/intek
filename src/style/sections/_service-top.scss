@@ -21,17 +21,18 @@
 }
 
 .service-top__slide {
-  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: cover;
 
-  @include max(1024) {
-    min-height: 750px;
-  }
-
   @include max(760) {
     background-position: 70% 50%;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 120px;
   }
 }
 
@@ -40,13 +41,6 @@
   z-index: 1;
   width: 100%;
   max-width: 570px;
-  padding-top: 330px;
-  padding-bottom: 40px;
-
-  @include max(1024) {
-    padding-top: 250px;
-  }
-
   p {
     color: #fff;
   }

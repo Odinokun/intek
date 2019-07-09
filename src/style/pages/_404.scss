@@ -24,8 +24,7 @@
 .error__capture {
   width: 100%;
   max-width: 450px;
-  min-height: 830px;
-  padding-top: 280px;
+  padding-top: 250px;
   padding-bottom: 40px;
 
   @include max(1330) {
