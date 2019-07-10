@@ -1,18 +1,14 @@
 .services-page {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-services.jpg');
   background-repeat: no-repeat;
   background-position: 82% 0;
-
-  @include max(1024) {
-    padding-top: 150px;
-  }
 }
 
 .services-page__title {
   font-family: $font-medium;
   font-size: 40px;
-  margin-bottom: 67px;
+  margin-bottom: 40px;
 
   @include max(670) {
     font-size: 34px;
@@ -38,6 +34,7 @@
   padding-bottom: 35px;
   padding-left: 40px;
   border: 1px solid #e6e6e6;
+
   @include max(1170) {
     width: 100%;
   }
@@ -133,10 +130,12 @@
   padding-right: 40px;
   padding-bottom: 5px;
   text-decoration: none;
+
   @include max(600) {
     justify-content: flex-start;
     padding-top: 20px;
   }
+
   svg {
     fill: $highlight;
     width: 14px;

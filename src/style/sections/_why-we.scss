@@ -121,20 +121,20 @@
       right: -25px;
     }
   }
-}
 
-.slick-current + .slick-slide + .slick-slide {
-  pointer-events: none;
-  opacity: .3;
-
-  @include max(1200) {
-    pointer-events: auto;
-    opacity: 1;
-  }
-
-  @include max(840) {
+  .slick-current + .slick-slide + .slick-slide {
     pointer-events: none;
-    opacity: 0;
+    opacity: .3;
+
+    @include max(1200) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    @include max(840) {
+      pointer-events: none;
+      opacity: 0;
+    }
   }
 }
 

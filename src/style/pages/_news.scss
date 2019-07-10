@@ -1,18 +1,14 @@
 .news-page {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-news.jpg');
   background-repeat: no-repeat;
   background-position: 65% 0;
-
-  @include max(1024) {
-    padding-top: 150px;
-  }
 }
 
 .news-page__title {
   font-family: $font-medium;
   font-size: 40px;
-  margin-bottom: 71px;
+  margin-bottom: 40px;
 
   @include max(670) {
     font-size: 34px;
@@ -46,6 +42,7 @@
   @include max(500) {
     padding: 35px 20px;
   }
+
   p {
     line-height: 26px;
   }

@@ -1,12 +1,8 @@
 .documents {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-documents.jpg');
   background-repeat: no-repeat;
   background-position: 71% 0;
-
-  @include max(1024) {
-    padding-top: 150px;
-  }
 
   .main {
     padding-bottom: 130px;
@@ -35,6 +31,10 @@
 .documents__item--left {
   width: 60%;
   padding-right: 40px;
+  padding-top: 90px;
+  @include max(1200) {
+    padding-top: 0;
+  }
 
   @include max(1650) {
     width: 50%;
@@ -59,7 +59,7 @@
   font-family: $font-medium;
   font-size: 40px;
   line-height: 55px;
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 
   @include max(1020) {
     font-size: 32px;
@@ -71,7 +71,7 @@
 //begin documents-slider
 .documents-slider {
   height: 290px;
-  transform: translateY(40%);
+  transform: translateY(35%);
 
   @include max(1200) {
     max-width: 700px;
@@ -102,19 +102,19 @@
       right: -25px;
     }
   }
-}
 
-.slick-current + .slick-slide + .slick-slide {
-  pointer-events: none;
-  opacity: .3;
-
-  @include max(1200) {
-    pointer-events: auto;
-    opacity: 1;
-  }
-  @include max(840) {
+  .slick-current + .slick-slide + .slick-slide {
     pointer-events: none;
-    opacity: 0;
+    opacity: .3;
+
+    @include max(1200) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    @include max(840) {
+      pointer-events: none;
+      opacity: 0;
+    }
   }
 }
 

@@ -1,12 +1,8 @@
 .contacts {
-  padding-top: 243px;
+  padding-top: 120px;
   background-image: url('../img/bg-contacts.jpg');
   background-repeat: no-repeat;
   background-position: 62% 0;
-
-  @include max(1024) {
-    padding-top: 150px;
-  }
 }
 
 .contacts__title {
@@ -47,6 +43,7 @@
   justify-content: flex-start;
   align-items: center;
   margin: auto;
+
   @include max(1020) {
     align-items: flex-end;
   }
