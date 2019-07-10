@@ -11,7 +11,7 @@
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: 220px;
+    bottom: 190px;
     width: 100%;
     max-width: 771px;
     height: 211px;
@@ -24,7 +24,6 @@
     background-size: contain;
 
     @include max(1200) {
-      bottom: 200px;
       max-width: 500px;
     }
     @include max(500) {

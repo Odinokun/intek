@@ -1,18 +1,13 @@
 // begin company-top section
-.company {
-  position: relative;
-  padding-top: 100px;
-}
-
-.company-top{
+.company-top {
   .container {
     display: flex;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 120px;
+    min-height: calc(100vh - 190px);
+    padding-top: 100px;
+    padding-bottom: 0;
   }
-
 }
+
 .company-top__pic {
   position: absolute;
   top: 0;
@@ -50,13 +45,13 @@
   z-index: 1;
   width: 100%;
   max-width: 450px;
-  min-height: 500px;
+  //min-height: 500px;
 
   @include max(1330) {
-    min-height: 450px;
+    //min-height: 450px;
   }
   @include max(1020) {
-    min-height: 350px;
+    //min-height: 350px;
   }
   p {
     font-size: 16px;
