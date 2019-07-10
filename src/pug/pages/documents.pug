@@ -1,5 +1,10 @@
 extends ../_template
 
+mixin documents-slider__item(pic)
+  .documents-slider__item
+    a(data-fancybox='gallery', href='assets/img/why-we/why-we-' + pic + '.jpg')
+      img(src='assets/img/why-we/why-we-' + pic + '-thumb.jpg' alt='why we picture')
+
 mixin documents-tab__body-row
   .documents-tab__body-row
     .documents-tab__body-row-inn
@@ -41,43 +46,22 @@ block content
 
         .documents__item.documents__item--right
           // begin why-we-slider
-          .documents-slider#why-we-slider
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
-                img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
-                img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
-                img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-                img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
-                img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
-                img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
-            .documents-slider__item
-              a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
-                img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
+          .documents-slider#documents-slider
+            +documents-slider__item('00')
+            +documents-slider__item('01')
+            +documents-slider__item('02')
+            +documents-slider__item('03')
+            +documents-slider__item('00')
+            +documents-slider__item('00')
+            +documents-slider__item('01')
+            +documents-slider__item('02')
+            +documents-slider__item('03')
+            +documents-slider__item('00')
+            +documents-slider__item('00')
+            +documents-slider__item('01')
+            +documents-slider__item('02')
+            +documents-slider__item('03')
+            +documents-slider__item('00')
           // end why-we-slider
 
       // begin documents-tab

@@ -1,13 +1,9 @@
 .bitum {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-bitum-01.jpg'),
   url('../img/bg-bitum-02.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 77% 0, 0 200px;
-
-  @include max(1024) {
-    padding-top: 150px;
-  }
 
   .main {
     padding-bottom: 80px;
@@ -19,6 +15,9 @@
   font-size: 40px;
   margin-bottom: 70px;
 
+  @include max(1200) {
+    margin-bottom: 40px;
+  }
   @include max(670) {
     font-size: 34px;
     line-height: 1.2;
@@ -57,12 +56,10 @@
       padding-right: 30px;
     }
   }
-
   @include max(900) {
     width: 47.5%;
     padding: 0 !important;
   }
-
   @include max(600) {
     width: 100%;
   }
@@ -166,12 +163,10 @@
       padding-right: 30px;
     }
   }
-
   @include max(760) {
     width: 48%;
     padding-right: 0 !important;
   }
-
   @include max(500) {
     width: 100%;
   }

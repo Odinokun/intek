@@ -1,3 +1,9 @@
+mixin why-we-slider__item(pic)
+  .why-we-slider__item
+    a(data-fancybox='gallery', href='assets/img/why-we/why-we-' + pic + '.jpg')
+      img(src='assets/img/why-we/why-we-' + pic + '-thumb.jpg' alt='why we picture')
+
+
 // begin why-we
 .why-we
   .container
@@ -22,41 +28,13 @@
     .why-we__item.why-we__item--right
       // begin why-we-slider
       .why-we-slider#why-we-slider
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
-           img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
-           img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
-           img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-00.jpg')
-           img(src='assets/img/why-we/why-we-00-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-01.jpg')
-           img(src='assets/img/why-we/why-we-01-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-02.jpg')
-           img(src='assets/img/why-we/why-we-02-thumb.jpg' alt='why we picture')
-       .why-we-slider__item
-         a(data-fancybox='gallery', href='assets/img/why-we/why-we-03.jpg')
-           img(src='assets/img/why-we/why-we-03-thumb.jpg' alt='why we picture')
+        +why-we-slider__item('00')
+        +why-we-slider__item('01')
+        +why-we-slider__item('02')
+        +why-we-slider__item('03')
+        +why-we-slider__item('00')
+        +why-we-slider__item('01')
+        +why-we-slider__item('02')
+        +why-we-slider__item('03')
       // end why-we-slider
 // end why-we

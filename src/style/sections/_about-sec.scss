@@ -14,9 +14,9 @@
     background-position: 0 0;
     background-size: contain;
 
-    @include max(1330) {
-      opacity: .6;
-    }
+    //@include max(1330) {
+    //  opacity: .6;
+    //}
   }
   .container {
     display: flex;
@@ -24,15 +24,32 @@
 }
 
 .about-sec__item {
-  max-width: 690px;
-  margin-left: auto;
+  //max-width: 690px;
+  //margin-left: auto;
+  margin-left: 500px;
   padding-top: 120px;
   padding-bottom: 115px;
-
-  @include max(1330) {
-    padding-top: 60px;
+  @include max(1024) {
+    padding-top: 50px;
     padding-bottom: 50px;
   }
+  @include max(1020) {
+    margin-left: 450px;
+  }
+  @include max(900) {
+    margin-left: 0;
+    padding-top: 250px;
+    padding-bottom: 50px;
+  }
+  @include max(600) {
+    padding-top: 150px;
+  }
+
+
+  //@include max(1330) {
+  //  padding-top: 60px;
+  //  padding-bottom: 50px;
+  //}
 }
 
 .about-sec__title {

@@ -1,24 +1,20 @@
 .documents {
-  padding-top: 240px;
+  padding-top: 120px;
   background-image: url('../img/bg-documents.jpg');
   background-repeat: no-repeat;
   background-position: 71% 0;
 
-  @include max(1024) {
-    padding-top: 150px;
-  }
-
   .main {
     padding-bottom: 130px;
-  }
 
-  .container {
-    display: flex;
+    .container {
+      display: flex;
 
-    @include max(1200) {
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
+      @include max(1200) {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+      }
     }
   }
 }
@@ -35,15 +31,17 @@
 .documents__item--left {
   width: 60%;
   padding-right: 40px;
+  padding-top: 90px;
+  @include max(1200) {
+    padding-top: 0;
+  }
 
   @include max(1650) {
     width: 50%;
   }
-
   @include max(1440) {
     width: 40%;
   }
-
   @include max(1200) {
     width: auto;
   }
@@ -61,7 +59,7 @@
   font-family: $font-medium;
   font-size: 40px;
   line-height: 55px;
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 
   @include max(1020) {
     font-size: 32px;
@@ -72,46 +70,50 @@
 
 //begin documents-slider
 .documents-slider {
-  overflow: hidden;
-  width: calc(100% + 230px);
   height: 290px;
-  transform: translateY(40%);
+  transform: translateY(35%);
 
   @include max(1200) {
     max-width: 700px;
-    transform: translate(-110px, 0%);
+    transform: translate(0, 0);
   }
-
-  @include max(760) {
-    overflow: visible;
-    width: 100%;
-    transform: translate(0);
+  @include max(840) {
+    max-width: 500px;
+  }
+  @include max(600) {
+    max-width: 240px;
   }
 
   .slick-list {
     overflow: visible;
-    width: 470px !important;
-
-    @include max(760) {
-      overflow: hidden;
-    }
-
-    @include max(576) {
-      width: 240px !important;
-    }
   }
   .slick-prev {
-    display: none;
+    display: none !important;
 
-    @include max(760) {
-      display: block;
+    @include max(1200) {
+      z-index: 1;
+      display: block !important;
     }
   }
   .slick-next {
-    right: 100px;
+    right: -130px;
 
-    @include max(760) {
+    @include max(1200) {
       right: -25px;
+    }
+  }
+
+  .slick-current + .slick-slide + .slick-slide {
+    pointer-events: none;
+    opacity: .3;
+
+    @include max(1200) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    @include max(840) {
+      pointer-events: none;
+      opacity: 0;
     }
   }
 }
@@ -165,7 +167,7 @@
   &[aria-hidden='true'] {
     transition: .5s;
     pointer-events: none;
-    opacity: .3;
+    opacity: 0;
   }
   img {
     display: block;
