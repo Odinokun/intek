@@ -2,25 +2,21 @@
   position: relative;
   z-index: 11;
   display: none;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 50px;
+  height: 60px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #faa61a 0%, #ffcb05 100%);
+  @include max(760) {
+    display: flex;
+  }
+}
+
+.burger-inn {
   width: 33px;
   height: 33px;
-  margin-top: 10px;
-  margin-right: 15px;
-  cursor: pointer;
-  @include max(760) {
-    display: block;
-  }
-
-  @include max(500) {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  @include max(425) {
-    margin-top: 6px;
-    margin-right: 10px;
-  }
 }
 
 .burger-brick {
@@ -28,7 +24,11 @@
   height: 3px;
   margin-top: 6px;
   transition: .3s ease-out;
-  background: $text;
+  background: #fff;
+  &:last-child {
+    width: 50%;
+    margin-left: 50%;
+  }
 }
 
 .active {
@@ -38,7 +38,9 @@
   }
 
   .burger-brick:last-child {
+    width: 100%;
     margin-top: -12px;
+    margin-left: 0;
     transform: rotate(-405deg);
   }
 

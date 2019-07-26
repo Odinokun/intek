@@ -13,16 +13,25 @@
     align-items: flex-start;
     width: 100%;
     max-width: 1200px;
+    min-height: 0;
     margin: 0 auto;
   }
+
   @include max(760) {
     justify-content: space-between;
-    min-height: 80px;
+    max-height: 60px;
+    background-color: #fff;
   }
+
+  @include max(530) {
+    flex-wrap: nowrap;
+  }
+
   @include max(500) {
     justify-content: center;
   }
+
   @include max(425) {
-    padding: 10px;
+    padding: 0;
   }
 }

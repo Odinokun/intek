@@ -9,14 +9,22 @@
     position: relative;
     margin: 15px 0 15px auto;
   }
+
   @include max(760) {
-    margin: 15px 0;
+    margin: 5px 0 15px 0;
   }
+
+  @include max(530) {
+    position: relative;
+  }
+
   @include max(500) {
-    margin: 0 0 10px 0;
+    flex: none;
+    margin: 5px 0 10px 0;
   }
+
   @include max(425) {
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 }
 
@@ -24,11 +32,14 @@
   display: flex;
   text-decoration: none;
   svg {
+    fill: $text;
     width: 11px;
     height: 20px;
     margin-top: 3px;
     margin-right: 8px;
-    fill:$text;
+    @include max(500) {
+      display: none;
+    }
   }
 }
 
@@ -36,7 +47,12 @@
   font-family: $font-bold;
   font-size: 20px;
   line-height: 26px;
+  white-space: nowrap;
   color: $dark;
+
+  @include max(500) {
+    font-size: 15px;
+  }
 }
 
 .header__city {

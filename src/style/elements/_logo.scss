@@ -9,18 +9,26 @@
   @include max(1600) {
     position: relative;
   }
+
   @include max(1200) {
-    margin: 15px 0;
+    margin: 5px 0 15px 0;
   }
-  @include max(500) {
-    width: 100%;
+
+  @include max(530) {
+    flex: 1;
     svg {
       margin: 0 auto;
     }
   }
+
+  @include max(420) {
+    padding: 0 5px;
+  }
+
   @include max(425) {
     margin: 0 0 15px 0;
   }
+
   &:hover {
     svg {
       fill: $highlight;
@@ -31,5 +39,10 @@
     width: 180px;
     height: 33px;
     transition: fill .5s;
+
+    @include max(500) {
+      width: 100%;
+      max-width: 180px;
+    }
   }
 }
